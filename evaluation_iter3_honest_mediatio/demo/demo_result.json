@@ -1,0 +1,13 @@
+{
+  "id": "eval_id3_it3__opus",
+  "type": "code",
+  "title": "Honest Mediation Reanalysis and Variance Decomposition",
+  "summary": "This evaluation reanalyzes the mediation results from exp_id1 (GEV tail-constraint analysis) and merges with exp_id4 (data quality validation) to perform five analyses: (1) honest mediation reporting exposing the suppression pattern where opposing indirect (+0.029) and direct (-0.026) paths yield a near-zero total effect (0.002), making the proportion_mediated=11.78 nonsensical; (2) alternative causal models including reverse mediation (entropy\u2192morph\u2192xi, 5000 bootstrap) showing the reverse indirect path is non-significant, making forward and reverse models distinguishable; (3) entropy-only OLS and mixed-effects models showing entropy alone captures R\u00b2=0.036 (OLS) / pseudo-R\u00b2=0.119 (mixed), with only marginal gain from adding morph_richness and head_direction_ratio; (4) confound-restricted mediation on feat_completeness>0.5 subset (135 treebanks, 19 families) where the opposing-path pattern does NOT persist, indicating annotation confound materially alters mediation interpretation; (5) unexplained variance decomposition showing corpus size (r=-0.023, p=0.76), annotation completeness (r=-0.10, p=0.18), and binned sentences (r=-0.11, p=0.16) explain modest additional variance beyond the base model's pseudo-R\u00b2=0.163, leaving ~80% unexplained. A publication-quality mediation path diagram is generated. Output includes 194 per-treebank examples with 39 fields each (eval_* metrics, metadata_* fields) and 46 aggregate metrics. All files validated against exp_eval_sol_out schema.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_3/gen_art/eval_id3_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id3_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id3_it3__opus/eval_code_demo.ipynb"
+}

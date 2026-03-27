@@ -1,0 +1,13 @@
+{
+  "id": "exp_id4_it2__opus",
+  "type": "code",
+  "title": "Data Quality Validation for GEV Dependency Distance Analysis",
+  "summary": "Implements six data quality validation analyses for GEV dependency distance research using data_id3 (238 UD treebanks, 420K sentences) and data_id4 (106 Grambank-UD overlap). Each of 238 treebanks becomes one example with two predict fields. predict_comprehensive_validation combines all six analyses per treebank: (1) Grambank-UD morphological richness cross-validation with Spearman/Pearson correlations and bootstrap CIs across 83 paired languages with outlier detection; (2) word-order entropy threshold sensitivity recomputing entropy at threshold 10 and 20 for 180 overlap treebanks via HuggingFace, checking rank stability; (3) representativeness of exact-length subset coverage vs full corpus with modality and genre breakdowns; (4) within-bin autocorrelation diagnostics via Ljung-Box on 918 treebank-bin combinations using parallel ProcessPoolExecutor; (5) annotation-completeness confound testing feat_completeness vs morph_richness correlation; (6) family-level bias checking distribution balance and normality. predict_baseline_range_check provides simple plausibility checks verifying numeric fields fall within expected ranges. Output conforms to exp_gen_sol_out schema. All 180 treebanks processed for entropy in 437s. Three diagnostic flags: one critical for confound exceeding rho 0.7 threshold, two warnings. Implementation uses cgroup memory limits, parallel Ljung-Box execution, and partial-result saving for robustness.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_2/gen_art/exp_id4_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id4_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id4_it2__opus/method_code_demo.ipynb"
+}

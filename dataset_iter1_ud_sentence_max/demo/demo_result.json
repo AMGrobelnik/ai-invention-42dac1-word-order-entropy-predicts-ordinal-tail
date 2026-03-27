@@ -1,0 +1,13 @@
+{
+  "id": "data_id3_it1__opus",
+  "type": "code",
+  "title": "UD Sentence Max-DD and Treebank Typological Features",
+  "summary": "This dataset artifact extracts sentence-level maximum dependency distance (max-DD) data and treebank-level typological features from 238 qualifying Universal Dependencies treebanks (122 unique languages) via the commul/universal_dependencies HuggingFace dataset (UD v2.17, Parquet format). Sentence-level rows (420,049 total) capture max_DD, normalized max_DD, and non-projectivity flags for sentences of exact lengths n=10,12,14,16,18,20, filtered by qualifying thresholds (>=500 total sentences per treebank, >=50 per bin). Treebank-level rows (238 total) include morphological richness (range 0.0\u20134.5), head-direction ratio (0.18\u20130.79, spanning head-final Turkish to head-initial Guajajara), Levshina 2019 frequency-weighted word-order entropy (0.01\u20130.77), non-projectivity rate (0.0\u20130.62), feature annotation completeness, genre, and spoken/written modality labels cross-referenced against Dobrovoljc 2022. Dependency distance vectors and tree edge lists are stored in a separate supplementary_distances.json file (72MB) to keep the main output under the file size limit. The full dataset is split into two parts (72MB each) in data_out/. All outputs conform to the exp_sel_data_out.json schema with metadata_* fields for all typological and structural features needed for downstream GEV fitting and regression analysis.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_1/gen_art/data_id3_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/data_id3_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/data_id3_it1__opus/data_code_demo.ipynb"
+}

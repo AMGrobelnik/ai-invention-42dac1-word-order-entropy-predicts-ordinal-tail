@@ -1,0 +1,13 @@
+{
+  "id": "eval_id2_it3__opus",
+  "type": "code",
+  "title": "Ordinal Validity Evaluation of GEV xi Parameter",
+  "summary": "This evaluation assesses whether single-sentence GEV shape parameter (xi) functions as a valid ordinal index of tail-constraint severity despite failing super-block parametric validation. The eval.py script implements six complementary analyses on data from exp_id1 (194 treebanks with xi estimates and typological predictors) and exp_id3 (super-block sensitivity results). Step 1 extracts super-block framing metrics: k20_raw_rho=-0.39, k30_raw_rho=-0.55, quantile preservation p95_rho=0.986, p99_rho=0.996, with 40.7% degenerate fits explaining why parametric super-block validation fails. Step 2 runs 500 bootstrap iterations resampling xi from N(xi_raw, se), yielding mean Kendall tau=0.770 (below 0.80 threshold, FAIL). Step 3 performs rank regression (xi_rank ~ entropy_rank + morph_rank + hdr_rank), finding entropy non-significant at rank level p=0.126 (FAIL). Step 4 runs 10,000 permutation iterations giving p=0.090 (FAIL at 0.001 threshold). Step 5 validates L-moments GEV fitting on 100 synthetic treebanks across sample sizes 50-500, achieving rank recovery rho=0.963 (PASS). Overall verdict: FAILED (1/4 pass). Output contains three datasets: per-treebank ordinal evaluation (194 examples with bootstrap rank stats), simulation recovery (100 synthetic results), and ordinal validity summary. All 48 aggregate metrics in metrics_agg cover super-block framing, bootstrap stability, rank regression, permutation testing, simulation validation, and the composite four-test verdict.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_3/gen_art/eval_id2_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id2_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id2_it3__opus/eval_code_demo.ipynb"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it2__opus",
+  "type": "code",
+  "title": "Super-Block GEV Sensitivity Analysis for Max-DD Rankings",
+  "summary": "Validates whether single-sentence GEV shape parameter (xi) rankings across 241 qualifying treebank-bin combinations (56 treebanks, 6 sentence-length bins, 420K sentences) agree with super-block (K=20,30,50) GEV estimates where EVT convergence is better justified. Loads UD dependency data, constructs super-blocks by partitioning K same-length sentences and taking block maxima, fits GEV via L-moments (primary) and MLE (secondary) with sign convention xi=-c, then compares xi rankings via Spearman rho with bootstrap CIs. Key finding: GEV xi rankings show significant NEGATIVE correlation between single-sentence and super-block approaches (K=20 raw rho=-0.39, norm rho=-0.42; K=30 raw rho=-0.55), failing the rho>0.8 criterion. This results from degenerate super-block maxima from bounded integer max_DD data (40-65% of super-block fits produce out-of-range xi). Crucially, non-parametric quantile comparison reveals near-perfect rank preservation (p95 raw rho=0.986, p99 raw rho=0.996), proving ordinal treebank rankings ARE robust even though GEV parametric estimation breaks down for block maxima. Per-bin analysis shows disagreement strongest for shorter sentences (bins 10-14, rho -0.5 to -0.7) diminishing for longer sentences (bin 20, rho near 0). Output contains 521 examples across 3 datasets: per-combo GEV results (481 rows), summary statistics (6 rows), and sensitivity checks (34 rows). Six PNG visualization figures are produced.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id3_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id3_it2__opus/method_code_demo.ipynb"
+}

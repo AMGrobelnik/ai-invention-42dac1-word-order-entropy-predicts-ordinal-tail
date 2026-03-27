@@ -1,0 +1,13 @@
+{
+  "id": "data_id4_it1__opus",
+  "type": "code",
+  "title": "Grambank Morphosyntactic Complexity Mapped to UD",
+  "summary": "This dataset provides a per-language morphological complexity index from Grambank v1.0.3 mapped to Universal Dependencies treebanks via ISO 639-3. The pipeline downloads Grambank CLDF data from GitHub, grambank-analysed feature domain classification, and Glottolog CLDF for ISO mapping. It identifies 87 morphology-relevant features using authoritative domain classification (nominal/verbal/pronoun domains crossed with argument marking, TAME, number, class groupings) plus known morphological codes. For each language, it computes a complexity index (proportion of present morphological features out of coded ones, min 15-feature threshold). Languages map to UD treebanks via Glottocode-to-ISO through Glottolog, with macro-language resolution (arb\u2192ara, cmn\u2192zho). Output: 2,427 examples \u2014 106 overlapping Grambank+UD (fold=\"overlap\"), 2,253 Grambank-only, 68 UD-only. Each example: input=ISO code, output=JSON with morph index and individual feature values, plus metadata for glottocode, language name, family, macroarea, coordinates, and UD treebanks. Index ranges 0.08 (isolating, e.g. Mandarin) to 0.56 (inflected), mean 0.33. Provenance: Grambank v1.0.3 (Skirgard et al. 2023, CC-BY-4.0), Glottolog CLDF (CC-BY-4.0), grambank-analysed feature grouping.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_1/gen_art/data_id4_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/data_id4_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/data_id4_it1__opus/data_code_demo.ipynb"
+}

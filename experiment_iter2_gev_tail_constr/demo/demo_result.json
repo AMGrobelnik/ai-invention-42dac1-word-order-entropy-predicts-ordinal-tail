@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it2__opus",
+  "type": "code",
+  "title": "GEV Tail-Constraint Analysis Pipeline Results",
+  "summary": "This experiment fits GEV distributions to 918 bin-treebank combinations from 238 UD treebanks (dual-track: raw + normalized max_DD), computing 500-resample L-moments bootstrap CIs and comparing GEV against lognormal/gamma via AIC/BIC (GEV AIC-best in 95.2% of combos). Shape parameter xi is aggregated per treebank via inverse-variance weighting (194 treebanks). Mixed-effects regression with 26 language-family random intercepts on 172 treebanks reveals word-order entropy as the sole significant predictor (beta=0.084, p_fdr=0.0006), while morphological richness and head-direction ratio are non-significant. Preacher-Hayes mediation (5000 bootstraps) identifies full mediation: morphological richness affects xi entirely through word-order entropy (indirect CI [0.009, 0.055], direct CI crosses zero). Dual-track Spearman rho=0.9997 confirms robustness. Grambank cross-validation yields r=0.34 (p<0.001, n=178). EVT-unique pairs reach 46.2% among similar-mean-DD pairs, showing GEV tail shape captures typological signal invisible to mean DD. Six discordant language profiles, four spoken/written pairs, and four genre-control sets are analyzed. Baseline mean-DD regression R-squared=0.048 vs GEV pseudo-R-squared=0.163, confirming EVT superiority for syntactic constraint variation. No fallbacks triggered; pipeline completed in 2.4 minutes on 4 CPUs.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id1_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id1_it2__opus/method_code_demo.ipynb"
+}

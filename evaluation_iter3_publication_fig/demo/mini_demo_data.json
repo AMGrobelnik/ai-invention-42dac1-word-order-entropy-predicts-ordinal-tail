@@ -1,0 +1,1479 @@
+{
+  "exp1_metadata": {
+    "n_treebanks_analysed": 194,
+    "fit_quality": {
+      "n_combos": 918,
+      "pct_gev_aic_best": 95.20697167755992,
+      "pct_ad_pass": 28.21350762527233,
+      "n_ad_tested": 918,
+      "mle_lmom_mean_diff": 0.028616192748360747,
+      "mle_lmom_median_diff": 0.0,
+      "mle_lmom_max_diff": 0.2424888383695949
+    },
+    "dual_track": {
+      "spearman_rho": 0.9996712864615219,
+      "spearman_p": 1.8466332911742925e-307
+    },
+    "regression": {
+      "model_type": "mixed_effects",
+      "coefficients": {
+        "morph_richness_z": {
+          "beta": -0.027059554432692062,
+          "se": 0.021566459402069575,
+          "p": 0.20958570179836233,
+          "p_fdr": 0.20958570179836233,
+          "reject_fdr": false
+        },
+        "head_direction_ratio_z": {
+          "beta": -0.03106199026142626,
+          "se": 0.021896633022384784,
+          "p": 0.15602330412851628,
+          "p_fdr": 0.20958570179836233,
+          "reject_fdr": false
+        },
+        "word_order_entropy_z": {
+          "beta": 0.0839992653618956,
+          "se": 0.022553610580632936,
+          "p": 0.000195759718947162,
+          "p_fdr": 0.000587279156841486,
+          "reject_fdr": true
+        }
+      },
+      "vif": {
+        "morph_richness_z": 1.3649004550375623,
+        "head_direction_ratio_z": 1.1023800399121257,
+        "word_order_entropy_z": 1.3802957880325823
+      },
+      "pseudo_r2": 0.16295458785042038,
+      "partial_correlations": {
+        "morph_richness_z": {
+          "r": -0.11847576557038733,
+          "p": 0.12164109010996753
+        },
+        "head_direction_ratio_z": {
+          "r": -0.07276683558666665,
+          "p": 0.3428100668305183
+        },
+        "word_order_entropy_z": {
+          "r": 0.24630269287014908,
+          "p": 0.001125964990613305
+        }
+      },
+      "baseline_regression": {
+        "r_squared": 0.048281441684075,
+        "coefficients": {
+          "morph_richness_z": {
+            "beta": 0.4095039994828026,
+            "p": 0.007378770078466152
+          },
+          "head_direction_ratio_z": {
+            "beta": 0.052782267561332544,
+            "p": 0.697774318061418
+          },
+          "word_order_entropy_z": {
+            "beta": -0.06620667069695751,
+            "p": 0.6633615852311374
+          }
+        }
+      },
+      "n_treebanks": 172,
+      "n_families": 26
+    },
+    "mediation": {
+      "indirect_effect_mean": 0.028789266916890925,
+      "indirect_effect_ci": [
+        0.009078391442028447,
+        0.05513742928495675
+      ],
+      "indirect_significant": true,
+      "direct_effect_mean": -0.026345770886746032,
+      "direct_effect_ci": [
+        -0.057043927832131025,
+        0.0011488290315642988
+      ],
+      "direct_significant": false,
+      "total_effect_mean": 0.0024434960301448973,
+      "proportion_mediated": 11.781998645270459,
+      "n_valid_bootstraps": 5000,
+      "interpretation": "full_mediation"
+    },
+    "evt_unique_pairs": {
+      "n_total_pairs": 18721,
+      "n_similar_mean_dd": 9410,
+      "n_evt_unique": 4352,
+      "pct_evt_unique": 46.24867162592986
+    },
+    "spoken_written": [
+      {
+        "language": "Slovenian",
+        "spoken_tb": "sl_sst",
+        "written_tb": "sl_ssj",
+        "xi_spoken": -0.3313269229548899,
+        "xi_written": -0.38701811900215244,
+        "diff": 0.055691196047262526,
+        "cohens_d": 2.7368045870036903,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "French",
+        "spoken_tb": "fr_parisstories",
+        "written_tb": "fr_gsd",
+        "xi_spoken": -0.3031674656758668,
+        "xi_written": -0.42376898855350803,
+        "diff": 0.12060152287764125,
+        "cohens_d": 5.006438067235384,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "English-ATIS",
+        "spoken_tb": "en_atis",
+        "written_tb": "en_ewt",
+        "xi_spoken": -0.1048438313286888,
+        "xi_written": -0.5170893469173076,
+        "diff": 0.41224551558861877,
+        "cohens_d": 26.253385583383196,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "English-ESL",
+        "spoken_tb": "en_eslspok",
+        "written_tb": "en_ewt",
+        "xi_spoken": -0.3031507039747284,
+        "xi_written": -0.5170893469173076,
+        "diff": 0.2139386429425792,
+        "cohens_d": 5.54942454707918,
+        "prediction_confirmed": false
+      }
+    ],
+    "grambank_crossval": {
+      "n_overlap": 178,
+      "spearman_r": 0.33975531927168956,
+      "spearman_p": 3.4885360499566707e-06,
+      "pearson_r": 0.4155670307817942,
+      "pearson_p": 8.006838715778745e-09
+    },
+    "discordant_languages": {
+      "ar_padt": {
+        "description": "Arabic (rich morph + head-initial = DISCORDANT)",
+        "xi_raw": -0.5736131245726411,
+        "xi_raw_se": 0.054729171830152884,
+        "xi_per_bin": {
+          "10": -0.1779403717985547,
+          "12": -0.5468752945905501,
+          "14": -1.1308461933181457,
+          "16": -1.558933052623133,
+          "18": -2.4249506970672914,
+          "20": -2.5366587645991308
+        },
+        "morph_richness": 2.3848,
+        "head_direction_ratio": 0.686,
+        "word_order_entropy": 0.2622,
+        "predicted_xi": -0.5763094375096971,
+        "residual": 0.002696312937055967
+      },
+      "zh_gsd": {
+        "description": "Chinese (poor morph + mixed direction = DISCORDANT)",
+        "xi_raw": -0.34150333859025606,
+        "xi_raw_se": 0.02118865167126852,
+        "xi_per_bin": {
+          "10": -0.2818423172954148,
+          "14": -0.37990495583337075,
+          "12": -0.38994002423497265,
+          "16": -0.2920935965640633,
+          "20": -0.38313948783540336,
+          "18": -0.35744620648145703
+        },
+        "morph_richness": 0.1214,
+        "head_direction_ratio": 0.3762,
+        "word_order_entropy": 0.226,
+        "predicted_xi": -0.4266652070395672,
+        "residual": 0.08516186844931112
+      },
+      "eu_bdt": {
+        "description": "Basque (rich morph + head-final = CANONICAL)",
+        "xi_raw": -0.3474404591966716,
+        "xi_raw_se": 0.015243292229549696,
+        "xi_per_bin": {
+          "14": -0.32243792204117855,
+          "10": -0.29722060642999515,
+          "12": -0.3824044527062558,
+          "16": -0.37637596709227455,
+          "18": -0.38589167464296403,
+          "20": -0.35460891043351556
+        },
+        "morph_richness": 1.991,
+        "head_direction_ratio": 0.4684,
+        "word_order_entropy": 0.5859,
+        "predicted_xi": -0.31091324766334677,
+        "residual": -0.03652721153332483
+      },
+      "en_ewt": {
+        "description": "English (poor morph + head-initial = CANONICAL)",
+        "xi_raw": -0.5170893469173076,
+        "xi_raw_se": 0.014477846294579346,
+        "xi_per_bin": {
+          "10": -0.3708284468730218,
+          "12": -0.44048289999868606,
+          "16": -0.6450347291414349,
+          "14": -0.5414447911163465,
+          "20": -0.6933513100338354,
+          "18": -0.6083374357065954
+        },
+        "morph_richness": 1.3885,
+        "head_direction_ratio": 0.385,
+        "word_order_entropy": 0.2175,
+        "predicted_xi": -0.4700536725619127,
+        "residual": -0.04703567435539485
+      },
+      "tr_imst": {
+        "description": "Turkish (rich morph + head-final = CANONICAL)",
+        "xi_raw": -0.3649222401052948,
+        "xi_raw_se": 0.027622454620647212,
+        "xi_per_bin": {
+          "10": -0.43271068260077683,
+          "14": -0.3578339100811159,
+          "12": -0.3513184345797235,
+          "16": -0.3296940534495443,
+          "20": -0.3205336770008971,
+          "18": -0.33104709344563565
+        },
+        "morph_richness": 2.7547,
+        "head_direction_ratio": 0.3702,
+        "word_order_entropy": 0.1934,
+        "predicted_xi": -0.5168165907407154,
+        "residual": 0.15189435063542062
+      },
+      "hi_hdtb": {
+        "description": "Hindi (moderate morph + head-final = CANONICAL)",
+        "xi_raw": -0.6343298080727203,
+        "xi_raw_se": 0.01353826386479492,
+        "xi_per_bin": {
+          "10": -0.43488662667990907,
+          "14": -0.6817244048602629,
+          "12": -0.6241836702898654,
+          "18": -0.7009390125431373,
+          "16": -0.6838764475089926,
+          "20": -0.647542714424125
+        },
+        "morph_richness": 2.8869,
+        "head_direction_ratio": 0.4164,
+        "word_order_entropy": 0.2097,
+        "predicted_xi": -0.5272991523085198,
+        "residual": -0.10703065576420057
+      }
+    }
+  },
+  "exp1_examples": [
+    {
+      "input": "ar_padt",
+      "metadata_family": "Afro-Asiatic",
+      "metadata_word_order_entropy": 0.2622,
+      "metadata_morph_richness": 2.3848,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.686,
+      "predict_our_method": "{\"xi_raw\": -0.5736131245726411, \"xi_raw_se\": 0.054729171830152884, \"xi_norm\": -0.5736142447008563}"
+    },
+    {
+      "input": "eu_bdt",
+      "metadata_family": "Uto-Aztecan",
+      "metadata_word_order_entropy": 0.5859,
+      "metadata_morph_richness": 1.991,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4684,
+      "predict_our_method": "{\"xi_raw\": -0.3474404591966716, \"xi_raw_se\": 0.015243292229549696, \"xi_norm\": -0.34539938546227583}"
+    },
+    {
+      "input": "zh_gsd",
+      "metadata_family": "Sino-Tibetan",
+      "metadata_word_order_entropy": 0.226,
+      "metadata_morph_richness": 0.1214,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3762,
+      "predict_our_method": "{\"xi_raw\": -0.34150333859025606, \"xi_raw_se\": 0.02118865167126852, \"xi_norm\": -0.3415043797545871}"
+    },
+    {
+      "input": "en_ewt",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.2175,
+      "metadata_morph_richness": 1.3885,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.385,
+      "predict_our_method": "{\"xi_raw\": -0.5170893469173076, \"xi_raw_se\": 0.014477846294579346, \"xi_norm\": -0.5170901703532227}"
+    },
+    {
+      "input": "hi_hdtb",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.2097,
+      "metadata_morph_richness": 2.8869,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4164,
+      "predict_our_method": "{\"xi_raw\": -0.6343298080727203, \"xi_raw_se\": 0.01353826386479492, \"xi_norm\": -0.6487541848248234}"
+    },
+    {
+      "input": "tr_imst",
+      "metadata_family": "Turkic",
+      "metadata_word_order_entropy": 0.1934,
+      "metadata_morph_richness": 2.7547,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3702,
+      "predict_our_method": "{\"xi_raw\": -0.3649222401052948, \"xi_raw_se\": 0.027622454620647212, \"xi_norm\": -0.3649233744984854}"
+    },
+    {
+      "input": "ab_abnc",
+      "metadata_family": "Atlantic-Congo",
+      "metadata_word_order_entropy": 0.3681,
+      "metadata_morph_richness": 3.4527,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.3475,
+      "predict_our_method": "{\"xi_raw\": -0.26488070460429747, \"xi_raw_se\": 0.05419278507486695, \"xi_norm\": -0.264882842208278}"
+    },
+    {
+      "input": "wo_wtb",
+      "metadata_family": "Atlantic-Congo",
+      "metadata_word_order_entropy": 0.4016,
+      "metadata_morph_richness": 1.6942,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4937,
+      "predict_our_method": "{\"xi_raw\": -0.389051282473883, \"xi_raw_se\": 0.036371417202232505, \"xi_norm\": -0.3890518209805224}"
+    },
+    {
+      "input": "bm_crb",
+      "metadata_family": "Atlantic-Congo",
+      "metadata_word_order_entropy": 0.2126,
+      "metadata_morph_richness": 0.7246,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.4716,
+      "predict_our_method": "{\"xi_raw\": -0.6111365667769842, \"xi_raw_se\": 0.11619401753098696, \"xi_norm\": -0.6111379300094507}"
+    },
+    {
+      "input": "hbo_ptnk",
+      "metadata_family": "Afro-Asiatic",
+      "metadata_word_order_entropy": 0.2155,
+      "metadata_morph_richness": 1.7951,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5601,
+      "predict_our_method": "{\"xi_raw\": -1.1518216792049654, \"xi_raw_se\": 0.05090190002700646, \"xi_norm\": -1.1518216508676804}"
+    },
+    {
+      "input": "say_autogramm",
+      "metadata_family": "Afro-Asiatic",
+      "metadata_word_order_entropy": 0.3396,
+      "metadata_morph_richness": 0.8909,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.5481,
+      "predict_our_method": "{\"xi_raw\": -0.3245460685409759, \"xi_raw_se\": 0.04978473884356646, \"xi_norm\": -0.32454741010809196}"
+    },
+    {
+      "input": "am_att",
+      "metadata_family": "Afro-Asiatic",
+      "metadata_word_order_entropy": 0.6491,
+      "metadata_morph_richness": 1.3671,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.5361,
+      "predict_our_method": "{\"xi_raw\": -0.07357837064792447, \"xi_raw_se\": 0.06230199846707286, \"xi_norm\": -0.07357904258726877}"
+    },
+    {
+      "input": "da_ddt",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.4284,
+      "metadata_morph_richness": 1.8889,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4202,
+      "predict_our_method": "{\"xi_raw\": -0.5476263312809843, \"xi_raw_se\": 0.025535206134127488, \"xi_norm\": -0.547627138390428}"
+    },
+    {
+      "input": "ru_gsd",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.3137,
+      "metadata_morph_richness": 2.6736,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4832,
+      "predict_our_method": "{\"xi_raw\": -0.3343287898460019, \"xi_raw_se\": 0.02096106290627859, \"xi_norm\": -0.3343295241304367}"
+    },
+    {
+      "input": "cs_pdtc",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.436,
+      "metadata_morph_richness": 3.1635,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4413,
+      "predict_our_method": "{\"xi_raw\": -0.4607283710937643, \"xi_raw_se\": 0.003787832674499552, \"xi_norm\": -0.46072886120299233}"
+    },
+    {
+      "input": "sl_sst",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.4471,
+      "metadata_morph_richness": 2.0148,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3938,
+      "predict_our_method": "{\"xi_raw\": -0.3313269229548899, \"xi_raw_se\": 0.025935396380306806, \"xi_norm\": -0.3313274950886638}"
+    },
+    {
+      "input": "la_udante",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.5853,
+      "metadata_morph_richness": 3.2968,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.3898,
+      "predict_our_method": "{\"xi_raw\": -0.4207187051502882, \"xi_raw_se\": 0.11815952503410532, \"xi_norm\": -0.4207193432413731}"
+    },
+    {
+      "input": "hy_bsut",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.4178,
+      "metadata_morph_richness": 2.8,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3732,
+      "predict_our_method": "{\"xi_raw\": -0.41278466274109177, \"xi_raw_se\": 0.03523274526000809, \"xi_norm\": -0.41278547894234746}"
+    },
+    {
+      "input": "hy_armtdp",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.4087,
+      "metadata_morph_richness": 2.8506,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3726,
+      "predict_our_method": "{\"xi_raw\": -0.3205790433170817, \"xi_raw_se\": 0.02278435042157962, \"xi_norm\": -0.3205799769958219}"
+    },
+    {
+      "input": "uk_iu",
+      "metadata_family": "Indo-European",
+      "metadata_word_order_entropy": 0.3619,
+      "metadata_morph_richness": 2.5946,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4422,
+      "predict_our_method": "{\"xi_raw\": -0.44783209933916274, \"xi_raw_se\": 0.021389640316021058, \"xi_norm\": -0.4478329643525763}"
+    },
+    {
+      "input": "azz_itml",
+      "metadata_family": "Uto-Aztecan",
+      "metadata_word_order_entropy": 0.4661,
+      "metadata_morph_richness": 1.5428,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.4965,
+      "predict_our_method": "{\"xi_raw\": -0.6735422405243336, \"xi_raw_se\": 0.13609025110299186, \"xi_norm\": -0.6735435069026606}"
+    },
+    {
+      "input": "nhi_itml",
+      "metadata_family": "Uto-Aztecan",
+      "metadata_word_order_entropy": 0.3766,
+      "metadata_morph_richness": 1.0348,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.4378,
+      "predict_our_method": "{\"xi_raw\": -0.36599704761395246, \"xi_raw_se\": 0.1282953127497784, \"xi_norm\": -0.36599777092406743}"
+    },
+    {
+      "input": "qpm_philotis",
+      "metadata_family": "Unknown",
+      "metadata_word_order_entropy": 0.5651,
+      "metadata_morph_richness": 3.2156,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4591,
+      "predict_our_method": "{\"xi_raw\": -0.4471367825253623, \"xi_raw_se\": 0.03274399855455498, \"xi_norm\": -0.4471372118212177}"
+    },
+    {
+      "input": "ur_udtb",
+      "metadata_family": "Unknown",
+      "metadata_word_order_entropy": 0.2496,
+      "metadata_morph_richness": 2.8161,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4048,
+      "predict_our_method": "{\"xi_raw\": -0.4803235607808752, \"xi_raw_se\": 0.026767701659763613, \"xi_norm\": -0.48032451461055786}"
+    },
+    {
+      "input": "bar_maibaam",
+      "metadata_family": "Unknown",
+      "metadata_word_order_entropy": 0.4463,
+      "metadata_morph_richness": 0.0005,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.3463,
+      "predict_our_method": "{\"xi_raw\": -0.5541776315145552, \"xi_raw_se\": 0.07724965350494764, \"xi_norm\": -0.5541786837559151}"
+    },
+    {
+      "input": "bor_bdt",
+      "metadata_family": "Bororoan",
+      "metadata_word_order_entropy": 0.3379,
+      "metadata_morph_richness": 0.9794,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5388,
+      "predict_our_method": "{\"xi_raw\": -0.17682635001950792, \"xi_raw_se\": 0.013501409792707903, \"xi_norm\": -0.17683641362901031}"
+    },
+    {
+      "input": "ro_rrt",
+      "metadata_family": "Austronesian",
+      "metadata_word_order_entropy": 0.3559,
+      "metadata_morph_richness": 2.6969,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5105,
+      "predict_our_method": "{\"xi_raw\": -0.418118760746444, \"xi_raw_se\": 0.018604771209796686, \"xi_norm\": -0.4181193558393981}"
+    },
+    {
+      "input": "hr_set",
+      "metadata_family": "Austronesian",
+      "metadata_word_order_entropy": 0.3535,
+      "metadata_morph_richness": 2.665,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.444,
+      "predict_our_method": "{\"xi_raw\": -0.3270900016767835, \"xi_raw_se\": 0.017056184373042804, \"xi_norm\": -0.3270906289452828}"
+    },
+    {
+      "input": "id_pud",
+      "metadata_family": "Austronesian",
+      "metadata_word_order_entropy": 0.2552,
+      "metadata_morph_richness": 0.6095,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.5809,
+      "predict_our_method": "{\"xi_raw\": -0.4388251557273322, \"xi_raw_se\": 0.06868511011653257, \"xi_norm\": -0.4388258727988237}"
+    },
+    {
+      "input": "bxr_bdt",
+      "metadata_family": "Mongolic-Khitan",
+      "metadata_word_order_entropy": 0.2527,
+      "metadata_morph_richness": 0.97,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.3326,
+      "predict_our_method": "{\"xi_raw\": -0.40223433804509773, \"xi_raw_se\": 0.09877130244217999, \"xi_norm\": -0.40223604496415893}"
+    },
+    {
+      "input": "zh_beginner",
+      "metadata_family": "Sino-Tibetan",
+      "metadata_word_order_entropy": 0.3068,
+      "metadata_morph_richness": 0.199,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.4633,
+      "predict_our_method": "{\"xi_raw\": -0.34394210305621425, \"xi_raw_se\": 0.03850431073135368, \"xi_norm\": -0.3439438943606219}"
+    },
+    {
+      "input": "zh_gsdsimp",
+      "metadata_family": "Sino-Tibetan",
+      "metadata_word_order_entropy": 0.2245,
+      "metadata_morph_richness": 0.1214,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3761,
+      "predict_our_method": "{\"xi_raw\": -0.3393308444598287, \"xi_raw_se\": 0.020868934457815954, \"xi_norm\": -0.3393318872391684}"
+    },
+    {
+      "input": "zh_pud",
+      "metadata_family": "Sino-Tibetan",
+      "metadata_word_order_entropy": 0.239,
+      "metadata_morph_richness": 0.1493,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.4042,
+      "predict_our_method": "{\"xi_raw\": -0.3365493276125483, \"xi_raw_se\": 0.12620372760005796, \"xi_norm\": -0.33655099792945387}"
+    },
+    {
+      "input": "fi_tdt",
+      "metadata_family": "Uralic",
+      "metadata_word_order_entropy": 0.4585,
+      "metadata_morph_richness": 2.2974,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4282,
+      "predict_our_method": "{\"xi_raw\": -0.5232802779591681, \"xi_raw_se\": 0.013696180056215269, \"xi_norm\": -0.523281124361367}"
+    },
+    {
+      "input": "fi_pud",
+      "metadata_family": "Uralic",
+      "metadata_word_order_entropy": 0.4114,
+      "metadata_morph_richness": 2.2982,
+      "metadata_n_bins": 4,
+      "metadata_head_direction_ratio": 0.4415,
+      "predict_our_method": "{\"xi_raw\": -0.5246550021891614, \"xi_raw_se\": 0.05411132254791902, \"xi_norm\": -0.5246557370601835}"
+    },
+    {
+      "input": "et_ewt",
+      "metadata_family": "Uralic",
+      "metadata_word_order_entropy": 0.6031,
+      "metadata_morph_richness": 1.892,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3966,
+      "predict_our_method": "{\"xi_raw\": -0.49615949182315505, \"xi_raw_se\": 0.020845708711814265, \"xi_norm\": -0.49616024931727554}"
+    },
+    {
+      "input": "ka_glc",
+      "metadata_family": "Kartvelian",
+      "metadata_word_order_entropy": 0.2976,
+      "metadata_morph_richness": 2.6058,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3806,
+      "predict_our_method": "{\"xi_raw\": -0.43450703198794, \"xi_raw_se\": 0.026558179233448973, \"xi_norm\": -0.4345082251498606}"
+    },
+    {
+      "input": "ka_gnc",
+      "metadata_family": "Kartvelian",
+      "metadata_word_order_entropy": 0.3912,
+      "metadata_morph_richness": 1.9419,
+      "metadata_n_bins": 5,
+      "metadata_head_direction_ratio": 0.3643,
+      "predict_our_method": "{\"xi_raw\": -0.4063926598215195, \"xi_raw_se\": 0.04170526933204404, \"xi_norm\": -0.4063934025189841}"
+    },
+    {
+      "input": "de_lit",
+      "metadata_family": "Narrow Talodi",
+      "metadata_word_order_entropy": 0.4195,
+      "metadata_morph_richness": 0.7018,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3187,
+      "predict_our_method": "{\"xi_raw\": -0.4379122008189537, \"xi_raw_se\": 0.0476640640051811, \"xi_norm\": -0.43791327254687556}"
+    },
+    {
+      "input": "de_gsd",
+      "metadata_family": "Narrow Talodi",
+      "metadata_word_order_entropy": 0.3903,
+      "metadata_morph_richness": 2.3637,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.359,
+      "predict_our_method": "{\"xi_raw\": -0.5573908292186714, \"xi_raw_se\": 0.01450466750634001, \"xi_norm\": -0.5573899865369143}"
+    },
+    {
+      "input": "de_pud",
+      "metadata_family": "Narrow Talodi",
+      "metadata_word_order_entropy": 0.3673,
+      "metadata_morph_richness": 2.3703,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.3312,
+      "predict_our_method": "{\"xi_raw\": -0.44814190603717186, \"xi_raw_se\": 0.07829729997132091, \"xi_norm\": -0.4481427161312312}"
+    },
+    {
+      "input": "ht_adolphe",
+      "metadata_family": "Huitotoan",
+      "metadata_word_order_entropy": 0.4439,
+      "metadata_morph_richness": 0.6335,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5017,
+      "predict_our_method": "{\"xi_raw\": -0.33888190540196916, \"xi_raw_se\": 0.031458361057077236, \"xi_norm\": -0.3388826712751784}"
+    },
+    {
+      "input": "ja_bccwjluw",
+      "metadata_family": "Japonic",
+      "metadata_word_order_entropy": 0.0688,
+      "metadata_morph_richness": 0.0073,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5777,
+      "predict_our_method": "{\"xi_raw\": -0.34967820710557584, \"xi_raw_se\": 0.007197867762210427, \"xi_norm\": -0.3496673762902864}"
+    },
+    {
+      "input": "ja_gsd",
+      "metadata_family": "Japonic",
+      "metadata_word_order_entropy": 0.0412,
+      "metadata_morph_richness": 0.0056,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5184,
+      "predict_our_method": "{\"xi_raw\": -0.19847226405985585, \"xi_raw_se\": 0.018043100247578797, \"xi_norm\": -0.19847306387593125}"
+    },
+    {
+      "input": "ja_gsdluw",
+      "metadata_family": "Japonic",
+      "metadata_word_order_entropy": 0.013,
+      "metadata_morph_richness": 0.0058,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5723,
+      "predict_our_method": "{\"xi_raw\": -0.29000089551582264, \"xi_raw_se\": 0.01864288244411396, \"xi_norm\": -0.2900016628634774}"
+    },
+    {
+      "input": "naq_kdt",
+      "metadata_family": "Khoe-Kwadi",
+      "metadata_word_order_entropy": 0.5958,
+      "metadata_morph_richness": 1.5569,
+      "metadata_n_bins": 4,
+      "metadata_head_direction_ratio": 0.4262,
+      "predict_our_method": "{\"xi_raw\": -0.42367286033519064, \"xi_raw_se\": 0.03852605722998318, \"xi_norm\": -0.4236739996474509}"
+    },
+    {
+      "input": "ko_gsd",
+      "metadata_family": "Koreanic",
+      "metadata_word_order_entropy": 0.1422,
+      "metadata_morph_richness": 0.0068,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.3847,
+      "predict_our_method": "{\"xi_raw\": -0.4586695786400845, \"xi_raw_se\": 0.026237972235579204, \"xi_norm\": -0.45867072397435393}"
+    },
+    {
+      "input": "ko_littleprince",
+      "metadata_family": "Koreanic",
+      "metadata_word_order_entropy": 0.1819,
+      "metadata_morph_richness": 0.3371,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.3093,
+      "predict_our_method": "{\"xi_raw\": -0.6251580263366897, \"xi_raw_se\": 0.06915625491658087, \"xi_norm\": -0.6251593926928602}"
+    },
+    {
+      "input": "ko_ksl",
+      "metadata_family": "Koreanic",
+      "metadata_word_order_entropy": 0.0653,
+      "metadata_morph_richness": 0.0374,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.2367,
+      "predict_our_method": "{\"xi_raw\": -0.5572658190665511, \"xi_raw_se\": 0.021680371434034125, \"xi_norm\": -0.5572670221084364}"
+    },
+    {
+      "input": "gv_cadhan",
+      "metadata_family": "Tucanoan",
+      "metadata_word_order_entropy": 0.1087,
+      "metadata_morph_richness": 1.1087,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.6564,
+      "predict_our_method": "{\"xi_raw\": -2.2154104327881794, \"xi_raw_se\": 0.2954655032552905, \"xi_norm\": -2.215410432788179}"
+    },
+    {
+      "input": "cu_proiel",
+      "metadata_family": "Tucanoan",
+      "metadata_word_order_entropy": 0.6261,
+      "metadata_morph_richness": 3.2939,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4807,
+      "predict_our_method": "{\"xi_raw\": -0.16910372917966843, \"xi_raw_se\": 0.01135731183163986, \"xi_norm\": -0.1691276149224047}"
+    },
+    {
+      "input": "gun_dooley",
+      "metadata_family": "Tupian",
+      "metadata_word_order_entropy": 0.294,
+      "metadata_morph_richness": 0.9742,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.7043,
+      "predict_our_method": "{\"xi_raw\": -0.18982430341731174, \"xi_raw_se\": 0.04939191158118676, \"xi_norm\": -0.18982619714483512}"
+    },
+    {
+      "input": "yrl_complin",
+      "metadata_family": "Tupian",
+      "metadata_word_order_entropy": 0.5441,
+      "metadata_morph_richness": 1.7351,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.5851,
+      "predict_our_method": "{\"xi_raw\": -0.40950202960228604, \"xi_raw_se\": 0.04893476040089118, \"xi_norm\": -0.4095029662993869}"
+    },
+    {
+      "input": "no_nynorsk",
+      "metadata_family": "Chocoan",
+      "metadata_word_order_entropy": 0.3266,
+      "metadata_morph_richness": 1.305,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4114,
+      "predict_our_method": "{\"xi_raw\": -0.5242593961483278, \"xi_raw_se\": 0.014127765888969177, \"xi_norm\": -0.5242667096356627}"
+    },
+    {
+      "input": "no_bokmaal",
+      "metadata_family": "Chocoan",
+      "metadata_word_order_entropy": 0.3514,
+      "metadata_morph_richness": 1.6992,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4118,
+      "predict_our_method": "{\"xi_raw\": -0.5493466638788717, \"xi_raw_se\": 0.01365881844611474, \"xi_norm\": -0.5493428576538608}"
+    },
+    {
+      "input": "sa_vedic",
+      "metadata_family": "Chibchan",
+      "metadata_word_order_entropy": 0.5727,
+      "metadata_morph_richness": 2.4554,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4169,
+      "predict_our_method": "{\"xi_raw\": -0.2938611377627497, \"xi_raw_se\": 0.012918486557904315, \"xi_norm\": -0.2938853456061689}"
+    },
+    {
+      "input": "gd_arcosg",
+      "metadata_family": "Dravidian",
+      "metadata_word_order_entropy": 0.2391,
+      "metadata_morph_richness": 1.8406,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5562,
+      "predict_our_method": "{\"xi_raw\": -0.4608076133348473, \"xi_raw_se\": 0.03467159239812495, \"xi_norm\": -0.4608085440731317}"
+    },
+    {
+      "input": "sr_set",
+      "metadata_family": "Austroasiatic",
+      "metadata_word_order_entropy": 0.3123,
+      "metadata_morph_richness": 2.7097,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4576,
+      "predict_our_method": "{\"xi_raw\": -0.3854217053771691, \"xi_raw_se\": 0.025781989616446108, \"xi_norm\": -0.3854223924677058}"
+    },
+    {
+      "input": "vi_vtb",
+      "metadata_family": "Austroasiatic",
+      "metadata_word_order_entropy": 0.2056,
+      "metadata_morph_richness": 0.0,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.5592,
+      "predict_our_method": "{\"xi_raw\": -0.3546643681942971, \"xi_raw_se\": 0.026755003681625002, \"xi_norm\": -0.35466509367718235}"
+    },
+    {
+      "input": "sk_snk",
+      "metadata_family": "Nuclear Trans New Guinea",
+      "metadata_word_order_entropy": 0.5253,
+      "metadata_morph_richness": 3.0172,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4486,
+      "predict_our_method": "{\"xi_raw\": -0.3975401919317792, \"xi_raw_se\": 0.01715419118367808, \"xi_norm\": -0.39754105843058907}"
+    },
+    {
+      "input": "es_ancora",
+      "metadata_family": "Pano-Tacanan",
+      "metadata_word_order_entropy": 0.3045,
+      "metadata_morph_richness": 1.8156,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4351,
+      "predict_our_method": "{\"xi_raw\": -0.3502371582450154, \"xi_raw_se\": 0.016651407732594284, \"xi_norm\": -0.35023795408986147}"
+    },
+    {
+      "input": "es_gsd",
+      "metadata_family": "Pano-Tacanan",
+      "metadata_word_order_entropy": 0.277,
+      "metadata_morph_richness": 1.7732,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.4345,
+      "predict_our_method": "{\"xi_raw\": -0.4723110549787185, \"xi_raw_se\": 0.015718297171393867, \"xi_norm\": -0.47231611480020247}"
+    },
+    {
+      "input": "th_tud",
+      "metadata_family": "Tai-Kadai",
+      "metadata_word_order_entropy": 0.2562,
+      "metadata_morph_richness": 0.0052,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.6455,
+      "predict_our_method": "{\"xi_raw\": -0.09438002186181538, \"xi_raw_se\": 0.023592424963259417, \"xi_norm\": -0.09437991272768956}"
+    },
+    {
+      "input": "th_pud",
+      "metadata_family": "Tai-Kadai",
+      "metadata_word_order_entropy": 0.2784,
+      "metadata_morph_richness": 0.1418,
+      "metadata_n_bins": 1,
+      "metadata_head_direction_ratio": 0.6246,
+      "predict_our_method": "{\"xi_raw\": -0.08534607828482028, \"xi_raw_se\": 0.09358786477537816, \"xi_norm\": -0.0853463959380948}"
+    },
+    {
+      "input": "tr_tourism",
+      "metadata_family": "Turkic",
+      "metadata_word_order_entropy": 0.1495,
+      "metadata_morph_richness": 2.4126,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.3744,
+      "predict_our_method": "{\"xi_raw\": -0.3375737847094538, \"xi_raw_se\": 0.059345984396666454, \"xi_norm\": -0.33757506316029506}"
+    },
+    {
+      "input": "tr_penn",
+      "metadata_family": "Turkic",
+      "metadata_word_order_entropy": 0.0673,
+      "metadata_morph_richness": 2.2503,
+      "metadata_n_bins": 6,
+      "metadata_head_direction_ratio": 0.2133,
+      "predict_our_method": "{\"xi_raw\": -0.7941208374571986, \"xi_raw_se\": 0.014640106493720962, \"xi_norm\": -0.7941221526037034}"
+    },
+    {
+      "input": "tr_framenet",
+      "metadata_family": "Turkic",
+      "metadata_word_order_entropy": 0.0916,
+      "metadata_morph_richness": 2.6658,
+      "metadata_n_bins": 2,
+      "metadata_head_direction_ratio": 0.247,
+      "predict_our_method": "{\"xi_raw\": -0.2117288143810717, \"xi_raw_se\": 0.04838505532780966, \"xi_norm\": -0.21173077244712898}"
+    },
+    {
+      "input": "yi_yitb",
+      "metadata_family": "Pama-Nyungan",
+      "metadata_word_order_entropy": 0.3077,
+      "metadata_morph_richness": 0.0001,
+      "metadata_n_bins": 3,
+      "metadata_head_direction_ratio": 0.3606,
+      "predict_our_method": "{\"xi_raw\": -0.30757081545867315, \"xi_raw_se\": 0.044547420986154294, \"xi_norm\": -0.3075720550006255}"
+    }
+  ],
+  "exp2_data": {
+    "metadata": {
+      "summary_by_length": {
+        "10": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.1477,
+          "null_xi_min": -0.6395,
+          "null_xi_max": -0.4918,
+          "null_xi_mean": -0.5601,
+          "null_xi_std": 0.0492,
+          "obs_xi_range": 0.3904,
+          "obs_xi_min": -0.5306,
+          "obs_xi_max": -0.1402,
+          "obs_xi_mean": -0.3101,
+          "coles_pass_rate": "6/10",
+          "recommendation": "normalized_track_primary",
+          "rationale": "Null xi uniformly strongly negative (max = -0.492), indicating bound domination. Normalized track is more defensible."
+        },
+        "12": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.2029,
+          "null_xi_min": -0.7452,
+          "null_xi_max": -0.5423,
+          "null_xi_mean": -0.6177,
+          "null_xi_std": 0.058,
+          "obs_xi_range": 0.4486,
+          "obs_xi_min": -0.685,
+          "obs_xi_max": -0.2364,
+          "obs_xi_mean": -0.4379,
+          "coles_pass_rate": "3/10",
+          "recommendation": "normalized_track_primary",
+          "rationale": "Null xi uniformly strongly negative (max = -0.542), indicating bound domination. Normalized track is more defensible."
+        },
+        "14": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.2735,
+          "null_xi_min": -0.8224,
+          "null_xi_max": -0.5488,
+          "null_xi_mean": -0.6508,
+          "null_xi_std": 0.0739,
+          "obs_xi_range": 0.939,
+          "obs_xi_min": -1.1771,
+          "obs_xi_max": -0.2381,
+          "obs_xi_mean": -0.5904,
+          "coles_pass_rate": "1/10",
+          "recommendation": "raw_track_primary",
+          "rationale": "Null xi range = 0.274 (from -0.822 to -0.549) exceeds 0.25 threshold, supporting meaningful cross-treebank variation in the raw track."
+        },
+        "16": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.3043,
+          "null_xi_min": -0.8148,
+          "null_xi_max": -0.5105,
+          "null_xi_mean": -0.6399,
+          "null_xi_std": 0.0781,
+          "obs_xi_range": 1.3595,
+          "obs_xi_min": -1.5648,
+          "obs_xi_max": -0.2053,
+          "obs_xi_mean": -0.5567,
+          "coles_pass_rate": "2/10",
+          "recommendation": "raw_track_primary",
+          "rationale": "Null xi range = 0.304 (from -0.815 to -0.511) exceeds 0.25 threshold, supporting meaningful cross-treebank variation in the raw track."
+        },
+        "18": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.4185,
+          "null_xi_min": -0.9634,
+          "null_xi_max": -0.5449,
+          "null_xi_mean": -0.6948,
+          "null_xi_std": 0.1068,
+          "obs_xi_range": 2.1816,
+          "obs_xi_min": -2.432,
+          "obs_xi_max": -0.2504,
+          "obs_xi_mean": -0.6414,
+          "coles_pass_rate": "3/10",
+          "recommendation": "raw_track_primary",
+          "rationale": "Null xi range = 0.418 (from -0.963 to -0.545) exceeds 0.25 threshold, supporting meaningful cross-treebank variation in the raw track."
+        },
+        "20": {
+          "n_treebanks": 10,
+          "null_xi_range": 0.5241,
+          "null_xi_min": -1.0356,
+          "null_xi_max": -0.5115,
+          "null_xi_mean": -0.6981,
+          "null_xi_std": 0.1342,
+          "obs_xi_range": 2.4592,
+          "obs_xi_min": -2.7797,
+          "obs_xi_max": -0.3205,
+          "obs_xi_mean": -0.7517,
+          "coles_pass_rate": "1/10",
+          "recommendation": "raw_track_primary",
+          "rationale": "Null xi range = 0.524 (from -1.036 to -0.511) exceeds 0.25 threshold, supporting meaningful cross-treebank variation in the raw track."
+        }
+      }
+    },
+    "datasets": [
+      {
+        "examples": [
+          {
+            "input": "ar_padt__10",
+            "output": "Treebank: ar_padt, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.17211490707400537 | Null xi(L-mom): -0.6394890685472212 | Normalized obs xi: -0.1721 | Coles passes: Tru",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.6394890685472212,
+            "metadata_obs_xi_lmom": -0.17211490707400537,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "ar_padt__12",
+            "output": "Treebank: ar_padt, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6849617921798175 | Null xi(L-mom): -0.745159513705082 | Normalized obs xi: -0.6850 | Coles passes: False",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.745159513705082,
+            "metadata_obs_xi_lmom": -0.6849617921798175,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "ar_padt__14",
+            "output": "Treebank: ar_padt, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -1.1771343292834977 | Null xi(L-mom): -0.8223642305489676 | Normalized obs xi: -1.1771 | Coles passes: Fals",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.8223642305489676,
+            "metadata_obs_xi_lmom": -1.1771343292834977,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "ar_padt__16",
+            "output": "Treebank: ar_padt, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -1.564810477842608 | Null xi(L-mom): -0.8148067563314393 | Normalized obs xi: -1.5648 | Coles passes: False",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.8148067563314393,
+            "metadata_obs_xi_lmom": -1.564810477842608,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "ar_padt__18",
+            "output": "Treebank: ar_padt, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -2.432044202643972 | Null xi(L-mom): -0.963359095596305 | Normalized obs xi: -2.4320 | Coles passes: False",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.963359095596305,
+            "metadata_obs_xi_lmom": -2.432044202643972,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "ar_padt__20",
+            "output": "Treebank: ar_padt, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -2.779719859599477 | Null xi(L-mom): -1.035570877589795 | Normalized obs xi: -2.7797 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -1.035570877589795,
+            "metadata_obs_xi_lmom": -2.779719859599477,
+            "metadata_treebank": "ar_padt"
+          },
+          {
+            "input": "cs_cac__10",
+            "output": "Treebank: cs_cac, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.2813738039883776 | Null xi(L-mom): -0.5838046669655227 | Normalized obs xi: -0.2814 | Coles passes: True",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5838046669655227,
+            "metadata_obs_xi_lmom": -0.2813738039883776,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "cs_cac__12",
+            "output": "Treebank: cs_cac, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.24424413109150783 | Null xi(L-mom): -0.6163382752881565 | Normalized obs xi: -0.2442 | Coles passes: True",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.6163382752881565,
+            "metadata_obs_xi_lmom": -0.24424413109150783,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "cs_cac__14",
+            "output": "Treebank: cs_cac, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.48754060226371543 | Null xi(L-mom): -0.6534731371024193 | Normalized obs xi: -0.4875 | Coles passes: Fals",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.6534731371024193,
+            "metadata_obs_xi_lmom": -0.48754060226371543,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "cs_cac__16",
+            "output": "Treebank: cs_cac, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.5133834346888071 | Null xi(L-mom): -0.6612310385964912 | Normalized obs xi: -0.5134 | Coles passes: False",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6612310385964912,
+            "metadata_obs_xi_lmom": -0.5133834346888071,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "cs_cac__18",
+            "output": "Treebank: cs_cac, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.49027105707961 | Null xi(L-mom): -0.6940264005226435 | Normalized obs xi: -0.4903 | Coles passes: False",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.6940264005226435,
+            "metadata_obs_xi_lmom": -0.49027105707961,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "cs_cac__20",
+            "output": "Treebank: cs_cac, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6242896103883478 | Null xi(L-mom): -0.7438666107109355 | Normalized obs xi: -0.6243 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.7438666107109355,
+            "metadata_obs_xi_lmom": -0.6242896103883478,
+            "metadata_treebank": "cs_cac"
+          },
+          {
+            "input": "en_ewt__10",
+            "output": "Treebank: en_ewt, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.4356994557364643 | Null xi(L-mom): -0.5858086371921757 | Normalized obs xi: -0.4357 | Coles passes: False",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5858086371921757,
+            "metadata_obs_xi_lmom": -0.4356994557364643,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "en_ewt__12",
+            "output": "Treebank: en_ewt, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.47964580127108214 | Null xi(L-mom): -0.6597790762330782 | Normalized obs xi: -0.4796 | Coles passes: Fals",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.6597790762330782,
+            "metadata_obs_xi_lmom": -0.47964580127108214,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "en_ewt__14",
+            "output": "Treebank: en_ewt, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6296817370309483 | Null xi(L-mom): -0.6896186041441777 | Normalized obs xi: -0.6297 | Coles passes: False",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.6896186041441777,
+            "metadata_obs_xi_lmom": -0.6296817370309483,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "en_ewt__16",
+            "output": "Treebank: en_ewt, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.7219423623573528 | Null xi(L-mom): -0.6715798047513352 | Normalized obs xi: -0.7219 | Coles passes: False",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6715798047513352,
+            "metadata_obs_xi_lmom": -0.7219423623573528,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "en_ewt__18",
+            "output": "Treebank: en_ewt, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.4384696029942246 | Null xi(L-mom): -0.6817219521754344 | Normalized obs xi: -0.4385 | Coles passes: False",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.6817219521754344,
+            "metadata_obs_xi_lmom": -0.4384696029942246,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "en_ewt__20",
+            "output": "Treebank: en_ewt, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.8105127475104099 | Null xi(L-mom): -0.75742911242268 | Normalized obs xi: -0.8105 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.75742911242268,
+            "metadata_obs_xi_lmom": -0.8105127475104099,
+            "metadata_treebank": "en_ewt"
+          },
+          {
+            "input": "eu_bdt__10",
+            "output": "Treebank: eu_bdt, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.30741755708046664 | Null xi(L-mom): -0.49180301286184464 | Normalized obs xi: -0.3074 | Coles passes: Fal",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.49180301286184464,
+            "metadata_obs_xi_lmom": -0.30741755708046664,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "eu_bdt__12",
+            "output": "Treebank: eu_bdt, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.35126335878513143 | Null xi(L-mom): -0.5537669210656258 | Normalized obs xi: -0.3513 | Coles passes: Fals",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.5537669210656258,
+            "metadata_obs_xi_lmom": -0.35126335878513143,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "eu_bdt__14",
+            "output": "Treebank: eu_bdt, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.31192007437054753 | Null xi(L-mom): -0.6070106611532486 | Normalized obs xi: -0.3119 | Coles passes: Fals",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.6070106611532486,
+            "metadata_obs_xi_lmom": -0.31192007437054753,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "eu_bdt__16",
+            "output": "Treebank: eu_bdt, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.30622213007455207 | Null xi(L-mom): -0.6421066417495422 | Normalized obs xi: -0.3062 | Coles passes: Fals",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6421066417495422,
+            "metadata_obs_xi_lmom": -0.30622213007455207,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "eu_bdt__18",
+            "output": "Treebank: eu_bdt, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.29710105373207296 | Null xi(L-mom): -0.5984559202657037 | Normalized obs xi: -0.2971 | Coles passes: Fals",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.5984559202657037,
+            "metadata_obs_xi_lmom": -0.29710105373207296,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "eu_bdt__20",
+            "output": "Treebank: eu_bdt, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3928901212956635 | Null xi(L-mom): -0.5888271510088013 | Normalized obs xi: -0.3929 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.5888271510088013,
+            "metadata_obs_xi_lmom": -0.3928901212956635,
+            "metadata_treebank": "eu_bdt"
+          },
+          {
+            "input": "fi_tdt__10",
+            "output": "Treebank: fi_tdt, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.45321463135883305 | Null xi(L-mom): -0.5974770531004087 | Normalized obs xi: -0.4532 | Coles passes: Fals",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5974770531004087,
+            "metadata_obs_xi_lmom": -0.45321463135883305,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "fi_tdt__12",
+            "output": "Treebank: fi_tdt, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6544156627800182 | Null xi(L-mom): -0.6739612749483774 | Normalized obs xi: -0.6544 | Coles passes: False",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.6739612749483774,
+            "metadata_obs_xi_lmom": -0.6544156627800182,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "fi_tdt__14",
+            "output": "Treebank: fi_tdt, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6466060270079629 | Null xi(L-mom): -0.6668556671926106 | Normalized obs xi: -0.6466 | Coles passes: False",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.6668556671926106,
+            "metadata_obs_xi_lmom": -0.6466060270079629,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "fi_tdt__16",
+            "output": "Treebank: fi_tdt, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6390452985946676 | Null xi(L-mom): -0.6895880993175523 | Normalized obs xi: -0.6390 | Coles passes: False",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6895880993175523,
+            "metadata_obs_xi_lmom": -0.6390452985946676,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "fi_tdt__18",
+            "output": "Treebank: fi_tdt, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.7066662692103121 | Null xi(L-mom): -0.7086297742946659 | Normalized obs xi: -0.7067 | Coles passes: False",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.7086297742946659,
+            "metadata_obs_xi_lmom": -0.7066662692103121,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "fi_tdt__20",
+            "output": "Treebank: fi_tdt, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.5815778299677483 | Null xi(L-mom): -0.7158521014815914 | Normalized obs xi: -0.5816 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.7158521014815914,
+            "metadata_obs_xi_lmom": -0.5815778299677483,
+            "metadata_treebank": "fi_tdt"
+          },
+          {
+            "input": "hi_hdtb__10",
+            "output": "Treebank: hi_hdtb, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.5305642747392099 | Null xi(L-mom): -0.49309559318628815 | Normalized obs xi: -0.5306 | Coles passes: Fal",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.49309559318628815,
+            "metadata_obs_xi_lmom": -0.5305642747392099,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "hi_hdtb__12",
+            "output": "Treebank: hi_hdtb, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6238268926257575 | Null xi(L-mom): -0.5422581213912827 | Normalized obs xi: -0.6238 | Coles passes: Fals",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.5422581213912827,
+            "metadata_obs_xi_lmom": -0.6238268926257575,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "hi_hdtb__14",
+            "output": "Treebank: hi_hdtb, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.844266328109153 | Null xi(L-mom): -0.5488204483972435 | Normalized obs xi: -0.8443 | Coles passes: False",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.5488204483972435,
+            "metadata_obs_xi_lmom": -0.844266328109153,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "hi_hdtb__16",
+            "output": "Treebank: hi_hdtb, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.7103716989540837 | Null xi(L-mom): -0.5530414097795381 | Normalized obs xi: -0.7104 | Coles passes: Fals",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.5530414097795381,
+            "metadata_obs_xi_lmom": -0.7103716989540837,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "hi_hdtb__18",
+            "output": "Treebank: hi_hdtb, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6008148929031034 | Null xi(L-mom): -0.6491450473485766 | Normalized obs xi: -0.6008 | Coles passes: Fals",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.6491450473485766,
+            "metadata_obs_xi_lmom": -0.6008148929031034,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "hi_hdtb__20",
+            "output": "Treebank: hi_hdtb, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.658377197938361 | Null xi(L-mom): -0.6212168325689985 | Normalized obs xi: -0.6584 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.6212168325689985,
+            "metadata_obs_xi_lmom": -0.658377197938361,
+            "metadata_treebank": "hi_hdtb"
+          },
+          {
+            "input": "id_gsd__10",
+            "output": "Treebank: id_gsd, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.25428052497962855 | Null xi(L-mom): -0.5473017754546804 | Normalized obs xi: -0.2543 | Coles passes: True",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5473017754546804,
+            "metadata_obs_xi_lmom": -0.25428052497962855,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "id_gsd__12",
+            "output": "Treebank: id_gsd, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3848548586211353 | Null xi(L-mom): -0.6028755723147842 | Normalized obs xi: -0.3849 | Coles passes: False",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.6028755723147842,
+            "metadata_obs_xi_lmom": -0.3848548586211353,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "id_gsd__14",
+            "output": "Treebank: id_gsd, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6139789772125712 | Null xi(L-mom): -0.703004389881883 | Normalized obs xi: -0.6140 | Coles passes: False",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.703004389881883,
+            "metadata_obs_xi_lmom": -0.6139789772125712,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "id_gsd__16",
+            "output": "Treebank: id_gsd, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3150725271588492 | Null xi(L-mom): -0.6162147906075444 | Normalized obs xi: -0.3151 | Coles passes: False",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6162147906075444,
+            "metadata_obs_xi_lmom": -0.3150725271588492,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "id_gsd__18",
+            "output": "Treebank: id_gsd, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.5840779746817827 | Null xi(L-mom): -0.7734917706635901 | Normalized obs xi: -0.5841 | Coles passes: False",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.7734917706635901,
+            "metadata_obs_xi_lmom": -0.5840779746817827,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "id_gsd__20",
+            "output": "Treebank: id_gsd, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.5463497546778405 | Null xi(L-mom): -0.6470461025628673 | Normalized obs xi: -0.5463 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.6470461025628673,
+            "metadata_obs_xi_lmom": -0.5463497546778405,
+            "metadata_treebank": "id_gsd"
+          },
+          {
+            "input": "ja_gsd__10",
+            "output": "Treebank: ja_gsd, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.14015284656498694 | Null xi(L-mom): -0.5778349782508654 | Normalized obs xi: -0.1402 | Coles passes: True",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5778349782508654,
+            "metadata_obs_xi_lmom": -0.14015284656498694,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "ja_gsd__12",
+            "output": "Treebank: ja_gsd, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.2363973734119513 | Null xi(L-mom): -0.5744932162836434 | Normalized obs xi: -0.2364 | Coles passes: True",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.5744932162836434,
+            "metadata_obs_xi_lmom": -0.2363973734119513,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "ja_gsd__14",
+            "output": "Treebank: ja_gsd, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.23811621187688892 | Null xi(L-mom): -0.637995268736526 | Normalized obs xi: -0.2381 | Coles passes: True",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.637995268736526,
+            "metadata_obs_xi_lmom": -0.23811621187688892,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "ja_gsd__16",
+            "output": "Treebank: ja_gsd, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.20527676832604974 | Null xi(L-mom): -0.6394783190556862 | Normalized obs xi: -0.2053 | Coles passes: True",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6394783190556862,
+            "metadata_obs_xi_lmom": -0.20527676832604974,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "ja_gsd__18",
+            "output": "Treebank: ja_gsd, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.25042850131123534 | Null xi(L-mom): -0.6697936447849872 | Normalized obs xi: -0.2504 | Coles passes: True",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.6697936447849872,
+            "metadata_obs_xi_lmom": -0.25042850131123534,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "ja_gsd__20",
+            "output": "Treebank: ja_gsd, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3772574041899442 | Null xi(L-mom): -0.633413758375012 | Normalized obs xi: -0.3773 | Coles passes: False",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.633413758375012,
+            "metadata_obs_xi_lmom": -0.3772574041899442,
+            "metadata_treebank": "ja_gsd"
+          },
+          {
+            "input": "tr_imst__10",
+            "output": "Treebank: tr_imst, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.29363598669631297 | Null xi(L-mom): -0.5921688125254896 | Normalized obs xi: -0.2936 | Coles passes: Tru",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.5921688125254896,
+            "metadata_obs_xi_lmom": -0.29363598669631297,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "tr_imst__12",
+            "output": "Treebank: tr_imst, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.34100172462947137 | Null xi(L-mom): -0.6142882005745649 | Normalized obs xi: -0.3410 | Coles passes: Tru",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.6142882005745649,
+            "metadata_obs_xi_lmom": -0.34100172462947137,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "tr_imst__14",
+            "output": "Treebank: tr_imst, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.43209315698424183 | Null xi(L-mom): -0.6094883899016907 | Normalized obs xi: -0.4321 | Coles passes: Fal",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.6094883899016907,
+            "metadata_obs_xi_lmom": -0.43209315698424183,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "tr_imst__16",
+            "output": "Treebank: tr_imst, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3367637780343348 | Null xi(L-mom): -0.6002577380864507 | Normalized obs xi: -0.3368 | Coles passes: True",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.6002577380864507,
+            "metadata_obs_xi_lmom": -0.3367637780343348,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "tr_imst__18",
+            "output": "Treebank: tr_imst, Length: 18 | Trees: 89, Null linearizations: 44500 | Observed xi(L-mom): -0.33104709344563565 | Null xi(L-mom): -0.6643999793862169 | Normalized obs xi: -0.3310 | Coles passes: True",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.6643999793862169,
+            "metadata_obs_xi_lmom": -0.33104709344563565,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "tr_imst__20",
+            "output": "Treebank: tr_imst, Length: 20 | Trees: 83, Null linearizations: 41500 | Observed xi(L-mom): -0.3205336770008971 | Null xi(L-mom): -0.726690627114341 | Normalized obs xi: -0.3205 | Coles passes: True",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.726690627114341,
+            "metadata_obs_xi_lmom": -0.3205336770008971,
+            "metadata_treebank": "tr_imst"
+          },
+          {
+            "input": "zh_gsdsimp__10",
+            "output": "Treebank: zh_gsdsimp, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.23282968454348416 | Null xi(L-mom): -0.49216274721303677 | Normalized obs xi: -0.2328 | Coles passes:",
+            "metadata_sentence_length": 10,
+            "metadata_null_xi_lmom": -0.49216274721303677,
+            "metadata_obs_xi_lmom": -0.23282968454348416,
+            "metadata_treebank": "zh_gsdsimp"
+          },
+          {
+            "input": "zh_gsdsimp__12",
+            "output": "Treebank: zh_gsdsimp, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.3786382719203922 | Null xi(L-mom): -0.5941796887374794 | Normalized obs xi: -0.3786 | Coles passes: F",
+            "metadata_sentence_length": 12,
+            "metadata_null_xi_lmom": -0.5941796887374794,
+            "metadata_obs_xi_lmom": -0.3786382719203922,
+            "metadata_treebank": "zh_gsdsimp"
+          },
+          {
+            "input": "zh_gsdsimp__14",
+            "output": "Treebank: zh_gsdsimp, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.522485095486273 | Null xi(L-mom): -0.5698450850959695 | Normalized obs xi: -0.5225 | Coles passes: Fa",
+            "metadata_sentence_length": 14,
+            "metadata_null_xi_lmom": -0.5698450850959695,
+            "metadata_obs_xi_lmom": -0.522485095486273,
+            "metadata_treebank": "zh_gsdsimp"
+          },
+          {
+            "input": "zh_gsdsimp__16",
+            "output": "Treebank: zh_gsdsimp, Length: 16 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.2540808963472266 | Null xi(L-mom): -0.510548494355834 | Normalized obs xi: -0.2541 | Coles passes: Fa",
+            "metadata_sentence_length": 16,
+            "metadata_null_xi_lmom": -0.510548494355834,
+            "metadata_obs_xi_lmom": -0.2540808963472266,
+            "metadata_treebank": "zh_gsdsimp"
+          },
+          {
+            "input": "zh_gsdsimp__18",
+            "output": "Treebank: zh_gsdsimp, Length: 18 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.28258607560918825 | Null xi(L-mom): -0.5448703796113087 | Normalized obs xi: -0.2826 | Coles passes: ",
+            "metadata_sentence_length": 18,
+            "metadata_null_xi_lmom": -0.5448703796113087,
+            "metadata_obs_xi_lmom": -0.28258607560918825,
+            "metadata_treebank": "zh_gsdsimp"
+          },
+          {
+            "input": "zh_gsdsimp__20",
+            "output": "Treebank: zh_gsdsimp, Length: 20 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.42536970639255384 | Null xi(L-mom): -0.5114616421579196 | Normalized obs xi: -0.4254 | Coles passes: ",
+            "metadata_sentence_length": 20,
+            "metadata_null_xi_lmom": -0.5114616421579196,
+            "metadata_obs_xi_lmom": -0.42536970639255384,
+            "metadata_treebank": "zh_gsdsimp"
+          }
+        ]
+      }
+    ]
+  },
+  "exp4_metadata": {
+    "global_summary": {
+      "grambank_spearman_rho": 0.2969,
+      "grambank_interpretation": "WEAK",
+      "entropy_spearman_10v20": 0.9999,
+      "entropy_is_robust": true,
+      "overall_coverage": 0.1983,
+      "autocorr_proportion_significant": 0.2614,
+      "confound_rho": 0.7931,
+      "is_confound": "True",
+      "diagnostic_flags": [
+        "WARNING: 14 languages with feat_completeness < 0.3 may have artifactual morph_richness",
+        "CRITICAL: feat_completeness is a strong confound for morph_richness (rho > 0.7)",
+        "WARNING: >20% of bin-treebank combos show serial dependence"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "eval_id4_it3__opus",
+  "type": "code",
+  "title": "Publication Figures & Results Tables Evaluation",
+  "summary": "This evaluation generates 6 publication-quality matplotlib figures (300 DPI) and 4 results tables from all 4 iteration-2 GEV experiments. The eval.py script loads full_method_out.json from each dependency, produces PNG figures in figures/, and assembles eval_out.json conforming to the exp_eval_sol_out schema.\n\nOutput contains 4 datasets with 264 total examples: (1) treebank_visualization (194 examples) tracking xi_raw, xi_norm, rank, regression membership, family group, and discordant status; (2) figure_quality (6 examples) recording DPI, file size, data points, and annotations per figure; (3) results_tables (4 examples) verifying row/column counts, value accuracy, and completeness; (4) bound_awareness_summary (60 examples) recording null vs observed xi separation and track recommendations.\n\nThe 10 aggregate metrics verify: 6/6 figures, 4/4 tables, 506 data points plotted, all 11 key statistics verified (GEV AIC-best=95.2%, AD/KS=28.2%, beta=0.084, p_FDR=0.0006, partial_r=0.246, pseudo_R2=0.163, dual-track rho=0.9997, EVT-unique=46.2%, mediation indirect CI=[0.009,0.055], direct CI crosses zero), 100% DPI compliance, mean figure size 216KB, 172 regression treebanks, 6 discordant languages annotated, 6 family color groups, 6 bound-awareness lengths. Each example includes predict_our_method (JSON string) and eval_* numeric fields. Schema validation passes with no warnings.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_3/gen_art/eval_id4_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id4_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/eval_id4_it3__opus/eval_code_demo.ipynb"
+}

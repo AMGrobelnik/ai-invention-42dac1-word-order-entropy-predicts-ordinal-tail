@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it2__opus",
+  "type": "code",
+  "title": "Bound-Awareness GEV Null Simulation via Random Linearization",
+  "summary": "This experiment validates GEV fitting on bounded max dependency distance data by generating ~3M random projective linearizations (Futrell et al. 2015) across 10 typologically diverse UD treebanks at 6 sentence lengths. GEV is fitted via L-moments (primary) and MLE (secondary) with sign convention xi=-c. Bootstrap CIs (1000 resamples), Coles upper-endpoint criterion, and uniform-random baseline are computed. Key finding: null xi range increases with sentence length (0.15 at n=10 to 0.52 at n=20), crossing the 0.25 viability threshold at n=14. This yields length-dependent track recommendations: normalized track for n=10,12 (bound domination uniform) and raw track for n>=14 (meaningful cross-treebank variation). Overall recommendation: raw_track_primary (4/6 lengths). Output contains 60 treebank-length examples with GEV parameters, descriptive statistics, Coles diagnostics, and method agreement flags. All 10 treebanks processed (cs_pdt fell back to cs_cac). Baseline comparison shows uniform random xi~-0.28, confirming tree structure drives the strongly negative null xi (-0.5 to -1.0). Coles pass rates decrease with length (6/10 at n=10, 1/10 at n=20), indicating increasing bound influence. Results validate the dual-track design from the hypothesis.",
+  "original_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id2_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/data/runs/comp-ling-dobrovoljc_bto/4_gen_paper_repo/exp_id2_it2__opus/method_code_demo.ipynb"
+}
