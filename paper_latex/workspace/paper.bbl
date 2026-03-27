@@ -1,0 +1,156 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Futrell et~al.(2015)Futrell, Mahowald, and Gibson]{Futrell2015}
+Richard Futrell, Kyle Mahowald, and Edward Gibson.
+\newblock Large-scale evidence of dependency length minimization in 37
+  languages.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 112\penalty0
+  (33):\penalty0 10336--10341, 2015.
+\newblock \doi{10.1073/pnas.1502134112}.
+
+\bibitem[Liu et~al.(2017)Liu, Xu, and Liang]{Liu2017}
+Haitao Liu, Chunshan Xu, and Junying Liang.
+\newblock Dependency distance: A new perspective on syntactic patterns in
+  natural languages.
+\newblock \emph{Physics of Life Reviews}, 21:\penalty0 171--193, 2017.
+\newblock \doi{10.1016/j.plrev.2017.03.002}.
+
+\bibitem[Yadav et~al.(2020)Yadav, Vaidya, Shukla, and Husain]{Yadav2020}
+Himanshu Yadav, Ashwini Vaidya, Vishakha Shukla, and Samar Husain.
+\newblock Word order typology interacts with linguistic complexity: A
+  cross-linguistic corpus study.
+\newblock \emph{Cognitive Science}, 44\penalty0 (4):\penalty0 e12822, 2020.
+\newblock \doi{10.1111/cogs.12822}.
+
+\bibitem[Yadav et~al.(2022)Yadav, Mittal, and Husain]{Yadav2022}
+Himanshu Yadav, Shubham Mittal, and Samar Husain.
+\newblock A reappraisal of dependency length minimization as a linguistic
+  universal.
+\newblock \emph{Open Mind}, 6:\penalty0 147--168, 2022.
+\newblock \doi{10.1162/opmi_a_00060}.
+
+\bibitem[Li and Liu(2025)]{Li2025}
+Wenchao Li and Haitao Liu.
+\newblock Interactions among morphology, word order, and syntactic
+  directionality: Evidence from 55 languages.
+\newblock \emph{Entropy}, 27\penalty0 (11):\penalty0 1128, 2025.
+\newblock \doi{10.3390/e27111128}.
+
+\bibitem[Petrini and i~Cancho(2025)]{Petrini2025}
+Sonia Petrini and Ramon~Ferrer i~Cancho.
+\newblock The distribution of syntactic dependency distances.
+\newblock \emph{Glottometrics}, 58:\penalty0 35--94, 2025.
+\newblock \doi{10.53482/2025_58_424}.
+
+\bibitem[Liu(2008)]{Liu2008}
+Haitao Liu.
+\newblock Dependency distance as a metric of language comprehension difficulty.
+\newblock \emph{Journal of Cognitive Science}, 9\penalty0 (2):\penalty0
+  159--191, 2008.
+
+\bibitem[Coles(2001)]{Coles2001}
+Stuart Coles.
+\newblock \emph{An Introduction to Statistical Modeling of Extreme Values}.
+\newblock Springer, London, 2001.
+\newblock \doi{10.1007/978-1-4471-3675-0}.
+
+\bibitem[Hosking and Wallis(1997)]{Hosking1997}
+J.~R.~M. Hosking and J.~R. Wallis.
+\newblock \emph{Regional Frequency Analysis: An Approach Based on {L}-Moments}.
+\newblock Cambridge University Press, Cambridge, 1997.
+\newblock \doi{10.1017/CBO9780511529443}.
+
+\bibitem[Liu(2010)]{Liu2010}
+Haitao Liu.
+\newblock Dependency direction as a means of word-order typology: A method
+  based on dependency treebanks.
+\newblock \emph{Lingua}, 120\penalty0 (6):\penalty0 1567--1578, 2010.
+\newblock \doi{10.1016/j.lingua.2009.10.001}.
+
+\bibitem[Alemany-Puig and i~Cancho(2022)]{AlemanyPuig2022}
+Llu\'{\i}s Alemany-Puig and Ramon~Ferrer i~Cancho.
+\newblock Linear-time calculation of the expected sum of edge lengths in random
+  projective linearizations of trees.
+\newblock \emph{Computational Linguistics}, 48\penalty0 (3):\penalty0 491--516,
+  2022.
+\newblock \doi{10.1162/coli_a_00442}.
+
+\bibitem[Levshina(2019)]{Levshina2019}
+Natalia Levshina.
+\newblock Token-based typology and word order entropy: A study based on
+  {Universal Dependencies}.
+\newblock \emph{Linguistic Typology}, 23\penalty0 (3):\penalty0 533--572, 2019.
+\newblock \doi{10.1515/lingty-2019-0025}.
+
+\bibitem[Hosking(1990)]{Hosking1990}
+J.~R.~M. Hosking.
+\newblock {L}-moments: Analysis and estimation of distributions using linear
+  combinations of order statistics.
+\newblock \emph{Journal of the Royal Statistical Society: Series B},
+  52\penalty0 (1):\penalty0 105--124, 1990.
+\newblock \doi{10.1111/j.2517-6161.1990.tb01775.x}.
+
+\bibitem[Laio(2004)]{Laio2004}
+Francesco Laio.
+\newblock Cram{\'e}r--von {Mises} and {Anderson}--{Darling} goodness of fit
+  tests for extreme value distributions with unknown parameters.
+\newblock \emph{Water Resources Research}, 40:\penalty0 W09308, 2004.
+\newblock \doi{10.1029/2004WR003204}.
+
+\bibitem[Preacher(2015)]{Preacher2015}
+Kristopher~J. Preacher.
+\newblock Advances in mediation analysis: A survey and synthesis of new
+  developments.
+\newblock \emph{Annual Review of Psychology}, 66:\penalty0 825--852, 2015.
+\newblock \doi{10.1146/annurev-psych-010814-015258}.
+
+\bibitem[Maxwell and Cole(2007)]{Maxwell2007}
+Scott~E. Maxwell and David~A. Cole.
+\newblock Bias in cross-sectional analyses of longitudinal mediation.
+\newblock \emph{Psychological Methods}, 12\penalty0 (1):\penalty0 23--44, 2007.
+\newblock \doi{10.1037/1082-989X.12.1.23}.
+
+\bibitem[de~Marneffe et~al.(2021)de~Marneffe, Manning, Nivre, and
+  Zeman]{deMarneffe2021}
+Marie-Catherine de~Marneffe, Christopher~D. Manning, Joakim Nivre, and Daniel
+  Zeman.
+\newblock {Universal Dependencies}.
+\newblock \emph{Computational Linguistics}, 47\penalty0 (2):\penalty0 255--308,
+  2021.
+\newblock \doi{10.1162/coli_a_00402}.
+
+\bibitem[Skirgård et~al.(2023)Skirgård, Haynie, Blasi, Hammarstr{\"o}m,
+  Collins, Latarche, Lesage, Weber, Witzlack-Makarevich, Passmore, Chira,
+  Maurits, Dinnage, Dunn, Reesink, Singer, Bowern, Epps, Hill, Vesakoski,
+  Robbeets, Abbas, Auer, Bakker, Barbos, et~al.]{Skirgard2023}
+Hedvig Skirgård, Hannah~J. Haynie, Dami{\'a}n~E. Blasi, Harald
+  Hammarstr{\"o}m, Jeremy Collins, Jay~J. Latarche, Jakob Lesage, Tobias Weber,
+  Alena Witzlack-Makarevich, Sam Passmore, Angela Chira, Luke Maurits, Russell
+  Dinnage, Michael Dunn, Ger Reesink, Ruth Singer, Claire Bowern, Patience
+  Epps, Jane Hill, Outi Vesakoski, Martine Robbeets, Noor~Kareem Abbas, Daniel
+  Auer, Nancy~A. Bakker, Giulia Barbos, et~al.
+\newblock Grambank reveals the importance of genealogical constraints on
+  linguistic diversity and highlights the impact of language loss.
+\newblock \emph{Science Advances}, 9\penalty0 (30):\penalty0 eadg6175, 2023.
+\newblock \doi{10.1126/sciadv.adg6175}.
+
+\bibitem[Hammarstr{\"o}m et~al.(2024)Hammarstr{\"o}m, Forkel, Haspelmath, and
+  Bank]{Hammarstrom2024}
+Harald Hammarstr{\"o}m, Robert Forkel, Martin Haspelmath, and Sebastian Bank.
+\newblock Glottolog 5.0.
+\newblock Max Planck Institute for Evolutionary Anthropology, Leipzig, 2024.
+
+\bibitem[Burnham and Anderson(2004)]{Burnham2004}
+Kenneth~P. Burnham and David~R. Anderson.
+\newblock Multimodel inference: Understanding {AIC} and {BIC} in model
+  selection.
+\newblock \emph{Sociological Methods \& Research}, 33\penalty0 (2):\penalty0
+  261--304, 2004.
+\newblock \doi{10.1177/0049124104268644}.
+
+\end{thebibliography}
