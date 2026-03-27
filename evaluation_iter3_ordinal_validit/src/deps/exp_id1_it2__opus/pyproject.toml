@@ -1,0 +1,14 @@
+[project]
+name = "gev-tail-constraint"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "scipy==1.17.1",
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "statsmodels==0.14.6",
+    "lmoments3==1.0.8",
+    "loguru==0.7.3",
+    "tqdm==4.67.3",
+    "jsonschema==4.26.0",
+]

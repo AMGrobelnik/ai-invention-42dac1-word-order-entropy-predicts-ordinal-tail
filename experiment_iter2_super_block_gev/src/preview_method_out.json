@@ -1,0 +1,160 @@
+{
+  "datasets": [
+    {
+      "dataset": "super_block_gev_combos",
+      "examples": [
+        {
+          "input": "be_hse__10__20",
+          "output": "xi_single=-0.4023, xi_super=nan, diff=nan",
+          "metadata_treebank_id": "be_hse",
+          "metadata_length_bin": "10",
+          "metadata_K": "20",
+          "metadata_n_sentences": "1436",
+          "metadata_n_super_blocks": "71",
+          "metadata_language": "Belarusian",
+          "metadata_morph_richness": "2.519",
+          "metadata_head_direction_ratio": "0.4883",
+          "metadata_word_order_entropy": "0.3599",
+          "predict_xi_single_lmom": "-0.40233957052594255",
+          "predict_xi_single_mle": "-0.5855001255155519",
+          "predict_xi_super_lmom": "NaN",
+          "predict_xi_super_mle": "-1.3733886911301034",
+          "predict_xi_single_boot_ci_lo": "-0.4418626653047455",
+          "predict_xi_single_boot_ci_hi": "-0.3621251163908388",
+          "predict_xi_super_boot_ci_lo": "-17.881832839061993",
+          "predict_xi_super_boot_ci_hi": "-2.578004999649257",
+          "predict_xi_diff": "NaN",
+          "predict_xi_abs_diff": "NaN"
+        },
+        {
+          "input": "be_hse__12__20",
+          "output": "xi_single=-0.4511, xi_super=nan, diff=nan",
+          "metadata_treebank_id": "be_hse",
+          "metadata_length_bin": "12",
+          "metadata_K": "20",
+          "metadata_n_sentences": "1119",
+          "metadata_n_super_blocks": "55",
+          "metadata_language": "Belarusian",
+          "metadata_morph_richness": "2.519",
+          "metadata_head_direction_ratio": "0.4883",
+          "metadata_word_order_entropy": "0.3599",
+          "predict_xi_single_lmom": "-0.45113659536996675",
+          "predict_xi_single_mle": "-0.6995118865129689",
+          "predict_xi_super_lmom": "NaN",
+          "predict_xi_super_mle": "-1.360180097159294",
+          "predict_xi_single_boot_ci_lo": "-0.49891809620207256",
+          "predict_xi_single_boot_ci_hi": "-0.39973981184420515",
+          "predict_xi_super_boot_ci_lo": "-18.54716928408478",
+          "predict_xi_super_boot_ci_hi": "-2.4426560408280005",
+          "predict_xi_diff": "NaN",
+          "predict_xi_abs_diff": "NaN"
+        },
+        {
+          "input": "be_hse__14__20",
+          "output": "xi_single=-0.4835, xi_super=nan, diff=nan",
+          "metadata_treebank_id": "be_hse",
+          "metadata_length_bin": "14",
+          "metadata_K": "20",
+          "metadata_n_sentences": "878",
+          "metadata_n_super_blocks": "43",
+          "metadata_language": "Belarusian",
+          "metadata_morph_richness": "2.519",
+          "metadata_head_direction_ratio": "0.4883",
+          "metadata_word_order_entropy": "0.3599",
+          "predict_xi_single_lmom": "-0.4835365873189923",
+          "predict_xi_single_mle": "-0.7750843000237118",
+          "predict_xi_super_lmom": "NaN",
+          "predict_xi_super_mle": "-1.324285183528658",
+          "predict_xi_single_boot_ci_lo": "-0.5402722485260506",
+          "predict_xi_single_boot_ci_hi": "-0.42113973296719903",
+          "predict_xi_super_boot_ci_lo": "-18.54429665993814",
+          "predict_xi_super_boot_ci_hi": "-2.1351232384813965",
+          "predict_xi_diff": "NaN",
+          "predict_xi_abs_diff": "NaN"
+        }
+      ]
+    },
+    {
+      "dataset": "super_block_summary",
+      "examples": [
+        {
+          "input": "K=20_track=raw",
+          "output": "spearman_rho=-0.3909 (CI: [-0.529, -0.241]), n_pairs=143",
+          "metadata_K": "20",
+          "metadata_track": "raw",
+          "predict_spearman_rho": "-0.3908655898092518",
+          "predict_spearman_p": "1.3897564096475465e-06",
+          "predict_rho_ci_lo": "-0.528544533592705",
+          "predict_rho_ci_hi": "-0.24073817542698941",
+          "predict_pearson_r": "-0.38025945153940083",
+          "predict_pearson_p": "2.8059915091765178e-06",
+          "predict_n_qualifying_combos": "143",
+          "predict_n_qualifying_treebanks": "56",
+          "predict_mean_xi_diff": "-0.17661817160369206",
+          "predict_median_xi_diff": "-0.26808257576242184",
+          "predict_wilcoxon_p": "0.02375677406074222",
+          "predict_validation_passed": "False"
+        },
+        {
+          "input": "K=20_track=norm",
+          "output": "spearman_rho=-0.4183 (CI: [-0.538, -0.276]), n_pairs=181",
+          "metadata_K": "20",
+          "metadata_track": "norm",
+          "predict_spearman_rho": "-0.4182810657452791",
+          "predict_spearman_p": "4.648696789678965e-09",
+          "predict_rho_ci_lo": "-0.538486678413232",
+          "predict_rho_ci_hi": "-0.27563171168442074",
+          "predict_pearson_r": "-0.3848305114105413",
+          "predict_pearson_p": "8.847316144140092e-08",
+          "predict_n_qualifying_combos": "181",
+          "predict_n_qualifying_treebanks": "56",
+          "predict_mean_xi_diff": "-0.12886358601791625",
+          "predict_median_xi_diff": "-0.14143527025139907",
+          "predict_wilcoxon_p": "0.05150457726297245",
+          "predict_validation_passed": "False"
+        },
+        {
+          "input": "K=30_track=raw",
+          "output": "spearman_rho=-0.5544 (CI: [-0.700, -0.363]), n_pairs=76",
+          "metadata_K": "30",
+          "metadata_track": "raw",
+          "predict_spearman_rho": "-0.5543677375256323",
+          "predict_spearman_p": "2.039961488782808e-07",
+          "predict_rho_ci_lo": "-0.699701008811891",
+          "predict_rho_ci_hi": "-0.36320554850899667",
+          "predict_pearson_r": "-0.5444373518967891",
+          "predict_pearson_p": "3.6985173787151394e-07",
+          "predict_n_qualifying_combos": "76",
+          "predict_n_qualifying_treebanks": "45",
+          "predict_mean_xi_diff": "-0.05588121547764872",
+          "predict_median_xi_diff": "0.09258573193197886",
+          "predict_wilcoxon_p": "0.6673991372401701",
+          "predict_validation_passed": "False"
+        }
+      ]
+    },
+    {
+      "dataset": "sensitivity_checks",
+      "examples": [
+        {
+          "input": "check_min_blocks_30_K20",
+          "output": "rho=-0.5404367878459034; n_pairs=96",
+          "predict_check_name": "min_blocks_30_K20",
+          "predict_check_result": "{\"rho\": -0.5404367878459034, \"n_pairs\": 96}"
+        },
+        {
+          "input": "check_min_blocks_30_K30",
+          "output": "rho=-0.5493124703651019; n_pairs=37",
+          "predict_check_name": "min_blocks_30_K30",
+          "predict_check_result": "{\"rho\": -0.5493124703651019, \"n_pairs\": 37}"
+        },
+        {
+          "input": "check_min_blocks_30_K50",
+          "output": "rho=-0.0823529411764706; n_pairs=16",
+          "predict_check_name": "min_blocks_30_K50",
+          "predict_check_result": "{\"rho\": -0.0823529411764706, \"n_pairs\": 16}"
+        }
+      ]
+    }
+  ]
+}

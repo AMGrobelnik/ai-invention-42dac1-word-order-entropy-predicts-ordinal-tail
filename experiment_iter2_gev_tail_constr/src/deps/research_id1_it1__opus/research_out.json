@@ -1,0 +1,198 @@
+{
+  "title": "GEV Fitting Best Practices for Bounded Linguistic Data: Methodology Guide",
+  "summary": "This research provides a complete methodology guide for fitting Generalized Extreme Value (GEV) distributions to bounded linguistic data (max dependency distance from UD treebanks), covering six critical topics. (1) L-moments vs MLE: Hosking (1990) L-moments are less biased than MLE for GEV shape estimation when n < 500; Smith (1985) proved MLE regularity fails when xi < -0.5; decision table maps sample sizes to methods with flag conditions. (2) Bound-awareness validation: since max_DD is bounded in [1, n-1], a simulation protocol using random projective linearizations checks GEV validity before typological interpretation, following Coles (2001) flood-frequency analogies. (3) Dual-track design: raw max_DD preserves three-regime GEV classification while normalized max_DD/(n-1) forces Weibull domain but captures constraint gradient; Spearman rho > 0.8 validates robustness. (4) Alternative distribution comparison via AIC/BIC and parametric bootstrap KS/AD tests using scipy.stats.goodness_of_fit(), requiring >70% of bin-treebank combinations passing. (5) Typological variables: exact pseudocode for morphological richness (mean UD feats per token), word-order entropy (Levshina 2019 binary Shannon entropy), and head-direction ratio, with Grambank cross-validation. (6) Python package reference with CRITICAL sign convention: scipy and lmoments3 both use c = -xi (confirmed via scipy Issue #3844); conversion cheat sheet for scipy, lmoments3, pyextremes, and R packages included.",
+  "answer": "Comprehensive methodology guide for GEV fitting on bounded linguistic data (max dependency distance) covering 6 topics.\n\nSECTION 1: L-moments vs MLE comparison. Hosking (1990) introduced L-moments as linear combinations of order statistics that are more robust and less biased than MLE for GEV shape parameter estimation when n < 500 [1]. The first four L-moments and their ratios (tau_3 = L-skewness, tau_4 = L-kurtosis) are computed from probability-weighted moments [2]. A systematic comparative analysis across sample sizes 20-200 confirms that L-moments produce lower RMSE for the GEV shape parameter than MLE in small samples [3]. Martins and Stedinger (2000) proposed Generalized Maximum Likelihood (GML) estimation with a Beta(9,6) prior restricting the shape parameter to [-0.5, 0.5], which outperforms both pure MLE and L-moments for moderately negative shape values [4]. Smith (1985) proved MLE regularity conditions fail when xi < -0.5, making standard errors unreliable in the strong Weibull domain [5]. Small-sample MLE can produce absurd shape parameter values and convergence failures [6]. Hosking and Wallis (1997) provide the definitive regional frequency analysis framework recommending L-moments for n < 500 [7]. Decision rule: use L-moments as primary for 50-200 sentences, report both for 200-500, MLE primary for >500, always override to L-moments if xi_MLE < -0.5.\n\nSECTION 2: Bound-awareness validation. For sentences of length n, max_DD is bounded in [1, n-1]. The Fisher-Tippett-Gnedenko theorem assumes data drawn from effectively unbounded parent distributions [10]. When the practical data range approaches the theoretical bound, the GEV shape parameter is mechanically driven negative (Weibull), and variation in xi across treebanks may reflect proximity to the bound rather than genuine cognitive constraints. Following Coles (2001), validate by checking that the GEV-implied upper endpoint (mu - sigma/xi for xi < 0) exceeds the observed maximum by at least 20%, and that data occupies less than 60% of the theoretical [1, n-1] range [11]. The hydrology analogy is direct: catchment area imposes physical upper bounds on flood discharge, but practical distributions typically operate far from these bounds [7]. A simulation protocol using random projective linearizations (Futrell et al. 2015 algorithm) generates null distributions for comparison [8]. Alemany-Puig and Ferrer-i-Cancho (2022) provide a formal mathematical treatment of random projective linearization [12]. Petrini and Ferrer-i-Cancho (2022) analyze the theoretical distribution of dependency distances relative to the n-1 bound [9]. For each sentence length n in {10, 12, 14, 16, 18, 20}, dependency trees are randomly linearized maintaining projectivity, max_DD computed, and GEV fitted to the null distribution. If xi_null range across treebanks exceeds 0.25, the raw track is informative; if uniformly below -0.3, fall back to normalized track.\n\nSECTION 3: Dual-track design. Raw track preserves natural integer scale and allows full three-regime GEV classification (xi < 0 Weibull / xi approx 0 Gumbel / xi > 0 Frechet) IF the bound-awareness protocol passes [10]. Normalized track (max_DD/(n-1)) maps values to (0, 1], forcing xi <= 0 theoretically (Weibull domain), making Frechet/Gumbel regimes impossible [11]. However, it still captures the gradient of constraint strength: more negative xi = more sharply bounded, xi closer to 0 = looser constraint. Agreement criterion: if both tracks yield the same rank ordering of treebanks by xi (Spearman rho > 0.8), results are robust.\n\nSECTION 4: Alternative distribution comparison. Compare GEV vs log-normal vs gamma using AIC/BIC. Following Burnham and Anderson (2002/2004): AIC = 2k - 2ln(L), BIC = k*ln(n) - 2ln(L), with delta-AIC > 2 indicating substantial difference and > 10 indicating no support for the worse model [13]. CRITICAL: use scipy.stats.goodness_of_fit() for proper parametric bootstrap KS/AD tests, NOT naive scipy.stats.kstest() which is anti-conservative with estimated parameters [14]. Anderson-Darling is preferred over KS for tail sensitivity: A^2 = -n - (1/n) * sum[(2i-1)(ln F(y_i) + ln(1-F(y_{n+1-i})))] [15]. Laio (2004) provides modified AD critical values specifically for GEV with unknown parameters [16]. Note that Generalized Pareto (GPD) is for threshold exceedances (POT method), not block maxima, so its applicability to max_DD block maxima is theoretically weaker [10]. Decision: GEV adequate if AIC-best AND bootstrap p > 0.05 for >70% of bin-treebank combinations.\n\nSECTION 5: Typological variables. Morphological richness = mean features per token from UD feats column (count pipe separators + 1; 0 if feats is empty or \"_\") [17]. The complete UD universal feature inventory includes 27 features: PronType, NumType, Poss, Reflex, Gender, VerbForm, Animacy, Mood, NounClass, Tense, Number, Aspect, Case, Voice, Abbr, Definite, Evident, Typo, Deixis, Polarity, Foreign, DeixisRef, Person, ExtPos, Degree, Polite, Clusivity [18]. Cross-validate morphological richness with Grambank (195 binary morphosyntactic features, 2467 languages) via Glottocode mapping [19] [20]. Grambank publication confirms 195 features across 2467 languages and 215 families under Creative Commons 4.0 license [31]. Corpus-based morphological complexity measures from UD correlate with typological variables from WALS [29]. Word-order entropy follows Levshina (2019) exactly: binary Shannon entropy H = -sum[p(x)*log2(p(x))] applied to head-first vs dep-first for each dependency relation type, weighted by token frequency, with minimum frequency threshold of 20 tokens per relation [21]. Levshina examined 24 specific dependencies and co-dependencies. Interactions among morphology, word order, and syntactic directionality show that rich morphology consistently favors head-final structures [30]. Head-direction ratio provides a simpler complementary measure: proportion of head-first dependencies across the treebank.\n\nSECTION 6: Python packages. CRITICAL SIGN CONVENTION: scipy.stats.genextreme uses c = -xi, meaning scipy c > 0 corresponds to standard xi < 0 (Weibull/bounded), and scipy c < 0 corresponds to xi > 0 (Frechet/heavy-tail) [22]. This is confirmed by scipy Issue #3844 (Warren Weckesser's comment), resolved as \"by design\" with documentation PR #3879 [23]. lmoments3 uses the SAME sign convention: c = -xi [24]. API: from lmoments3 import distr; params = distr.gev.lmom_fit(data) returns OrderedDict with keys c, loc, scale [25]. scikit-extremes internally handles the sign issue but is less actively maintained [26]. pyextremes is the recommended high-level wrapper supporting MLE (scipy-backed), L-moments (lmoments3-backed), MCMC (emcee), and MOM fitting methods with built-in AICc and visualization [27]. Note: lmoments3 is GPLv3 licensed; SciPy 1.15+ may offer native L-moment computation as an alternative [28]. Every fitted c value must be negated before typological interpretation: xi = -c.",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1990.tb01775.x",
+      "title": "Hosking 1990 - L-moments: Analysis and Estimation of Distributions Using Linear Combinations of Order Statistics",
+      "summary": "Foundational paper defining L-moments and demonstrating their advantages over MLE for GEV estimation in small samples"
+    },
+    {
+      "index": 2,
+      "url": "https://en.wikipedia.org/wiki/L-moment",
+      "title": "Wikipedia - L-moment",
+      "summary": "Mathematical formulas for L-moments lambda_1 through lambda_4, L-moment ratios tau_3 and tau_4, and relationship to probability-weighted moments"
+    },
+    {
+      "index": 3,
+      "url": "https://www.nature.com/articles/s41598-024-84056-1",
+      "title": "Comparative analysis of L-moments, MLE, and MPS methods for extreme value analysis",
+      "summary": "Systematic comparison of L-moments vs MLE vs MPS across sample sizes 20-200, confirming L-moments advantage for small samples"
+    },
+    {
+      "index": 4,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/1999wr900330",
+      "title": "Martins & Stedinger 2000 - Generalized Maximum Likelihood GEV Quantile Estimators",
+      "summary": "GML estimation with Beta(9,6) prior on shape parameter restricted to [-0.5, 0.5], outperforming L-moments for -0.4 <= kappa <= 0"
+    },
+    {
+      "index": 5,
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/env.2742",
+      "title": "Practical strategies for GEV-based regression models for extremes",
+      "summary": "Documents Smith (1985) regularity conditions: MLE asymptotically normal only for xi > -0.5, not obtainable for xi < -1"
+    },
+    {
+      "index": 6,
+      "url": "https://www.hrpub.org/download/20200229/MSA8-13491068.pdf",
+      "title": "Parameter Estimations of the GEV Distributions for Small Sample Size",
+      "summary": "Demonstrates MLE instability and absurd shape parameter values in small samples, recommending L-moments"
+    },
+    {
+      "index": 7,
+      "url": "https://www.cambridge.org/core/books/regional-frequency-analysis/8C59835F9361705DAAE1ADFDEA7ECD30",
+      "title": "Hosking & Wallis 1997 - Regional Frequency Analysis: An Approach Based on L-Moments",
+      "summary": "Definitive framework for regional frequency analysis using L-moments with Monte Carlo validation procedures"
+    },
+    {
+      "index": 8,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1502134112",
+      "title": "Futrell et al. 2015 - Large-scale evidence of dependency length minimization in 37 languages",
+      "summary": "Random projective linearization algorithm for generating null distributions of dependency distances"
+    },
+    {
+      "index": 9,
+      "url": "https://arxiv.org/abs/2211.14620",
+      "title": "Petrini & Ferrer-i-Cancho 2022 - The distribution of syntactic dependency distances",
+      "summary": "Analysis of dependency distance distributions including max_DD bounds relative to sentence length n-1"
+    },
+    {
+      "index": 10,
+      "url": "https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution",
+      "title": "Wikipedia - Generalized extreme value distribution",
+      "summary": "GEV distribution theory, three sub-families (Weibull/Gumbel/Frechet), support depending on shape parameter"
+    },
+    {
+      "index": 11,
+      "url": "https://www.pymc.io/projects/examples/en/latest/case_studies/GEV.html",
+      "title": "PyMC - Generalized Extreme Value Distribution case study",
+      "summary": "GEV parameterization, Coles 2001 reference, Weibull upper endpoint formula mu - sigma/xi"
+    },
+    {
+      "index": 12,
+      "url": "https://direct.mit.edu/coli/article/48/3/491/110442",
+      "title": "Alemany-Puig & Ferrer-i-Cancho 2022 - Linear-Time Calculation of Expected Edge Lengths in Random Projective Linearizations",
+      "summary": "Formal mathematical treatment of random projective linearization algorithm and its properties"
+    },
+    {
+      "index": 13,
+      "url": "https://sites.warnercnr.colostate.edu/wp-content/uploads/sites/73/2017/05/Burnham-and-Anderson-2004-SMR.pdf",
+      "title": "Burnham & Anderson 2004 - Multimodel Inference: Understanding AIC and BIC",
+      "summary": "Guidelines for AIC/BIC model selection: delta-AIC < 2 substantial support, > 10 no support"
+    },
+    {
+      "index": 14,
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.goodness_of_fit.html",
+      "title": "SciPy - scipy.stats.goodness_of_fit documentation",
+      "summary": "Parametric bootstrap goodness-of-fit test supporting AD, KS, CvM, Filliben statistics with proper composite hypothesis handling"
+    },
+    {
+      "index": 15,
+      "url": "https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test",
+      "title": "Wikipedia - Anderson-Darling test",
+      "summary": "Anderson-Darling statistic formula A^2 = -n - (1/n) sum[(2i-1)(ln F(y_i) + ln(1-F(y_{n+1-i})))]"
+    },
+    {
+      "index": 16,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2004WR003204",
+      "title": "Laio 2004 - CvM and AD goodness of fit tests for extreme value distributions",
+      "summary": "Modified AD test for GEV with unknown parameters, critical values derived by simulation"
+    },
+    {
+      "index": 17,
+      "url": "https://direct.mit.edu/coli/article/47/2/255/98516/Universal-Dependencies",
+      "title": "de Marneffe et al. 2021 - Universal Dependencies",
+      "summary": "UD framework documentation including morphological features (feats column) and annotation schema"
+    },
+    {
+      "index": 18,
+      "url": "https://universaldependencies.org/u/feat/all.html",
+      "title": "Universal Dependencies - Universal Features complete list",
+      "summary": "Complete inventory of 27 universal morphological features organized by category (lexical, nominal, verbal, other)"
+    },
+    {
+      "index": 19,
+      "url": "https://grambank.clld.org/",
+      "title": "Grambank database",
+      "summary": "195 binary morphosyntactic features for 2467 language varieties with CLDF data files"
+    },
+    {
+      "index": 20,
+      "url": "https://clld.org/2015/11/13/glottocode-to-isocode.html",
+      "title": "CLLD - Mapping Glottocodes to ISO 639-3",
+      "summary": "Procedure for mapping between Glottocodes (used by Grambank) and ISO 639 codes (used by UD treebanks)"
+    },
+    {
+      "index": 21,
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/lingty-2019-0025/html",
+      "title": "Levshina 2019 - Token-based typology and word order entropy",
+      "summary": "Exact methodology: 24 dependencies/co-dependencies, binary Shannon entropy, frequency threshold of 20, UD v2.1"
+    },
+    {
+      "index": 22,
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.genextreme.html",
+      "title": "SciPy - scipy.stats.genextreme documentation",
+      "summary": "GEV distribution parameterization, PDF formula, sign convention note, support by shape parameter"
+    },
+    {
+      "index": 23,
+      "url": "https://github.com/scipy/scipy/issues/3844",
+      "title": "SciPy Issue #3844 - genextreme shape parameter sign convention",
+      "summary": "Warren Weckesser confirms c = -xi, resolved as 'by design' with documentation PR #3879"
+    },
+    {
+      "index": 24,
+      "url": "https://github.com/Ouranosinc/lmoments3",
+      "title": "Ouranosinc/lmoments3 GitHub repository",
+      "summary": "Maintained fork of lmoments3 package, GEV fitting via L-moments, same sign convention as scipy (c = -xi)"
+    },
+    {
+      "index": 25,
+      "url": "https://lmoments3.readthedocs.io/stable/usage.html",
+      "title": "lmoments3 documentation - Usage",
+      "summary": "API details for lmom_ratios() and distr.gev.lmom_fit(), return types and parameter structure"
+    },
+    {
+      "index": 26,
+      "url": "https://github.com/kikocorreoso/scikit-extremes/blob/master/skextremes/models/classic.py",
+      "title": "scikit-extremes source code - classic.py",
+      "summary": "Sign convention handling: stores scipy/lmoments3 values without negation, but negates in _ci_delta method"
+    },
+    {
+      "index": 27,
+      "url": "https://georgebv.github.io/pyextremes/",
+      "title": "pyextremes documentation",
+      "summary": "High-level EVA wrapper supporting MLE, L-moments, MCMC, MOM fitting with built-in AICc and visualization"
+    },
+    {
+      "index": 28,
+      "url": "https://github.com/Ouranosinc/xclim/issues/1620",
+      "title": "xclim Issue #1620 - lmoments3 GPL licensing concerns",
+      "summary": "lmoments3 GPLv3 license issues, SciPy 1.15 native lmoment as potential replacement"
+    },
+    {
+      "index": 29,
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/lingvan-2021-0007/html",
+      "title": "Morphological complexity measures - correlation and validation",
+      "summary": "Corpus-based morphological complexity measures from UD treebanks correlate with typological variables from WALS"
+    },
+    {
+      "index": 30,
+      "url": "https://www.mdpi.com/1099-4300/27/11/1128",
+      "title": "Interactions Among Morphology, Word Order, and Syntactic Directionality (2025)",
+      "summary": "Morphological richness weakly related to word order entropy; rich morphology consistently favors head-final structures"
+    },
+    {
+      "index": 31,
+      "url": "https://www.science.org/doi/10.1126/sciadv.adg6175",
+      "title": "Grambank reveals importance of genealogical constraints on linguistic diversity",
+      "summary": "Grambank publication paper: 195 features, 2467 languages, 215 families, Creative Commons 4.0 license"
+    }
+  ],
+  "follow_up_questions": [
+    "How does the GEV shape parameter behave empirically when fitted to actual UD treebank max_DD data across the six sentence-length bins, and do the L-moments and MLE estimates agree within the 0.1 threshold?",
+    "What is the minimum sentence count per length bin needed for stable L-moments estimation of the GEV shape parameter, and are there UD treebanks that fall below this threshold for most bins?",
+    "Are there UD treebanks where the feats column is systematically empty or sparsely annotated, and how does this bias morphological richness estimates in cross-linguistic comparison?"
+  ]
+}

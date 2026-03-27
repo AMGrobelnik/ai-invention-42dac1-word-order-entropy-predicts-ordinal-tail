@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "evaluation_name": "Publication Figures & Results Tables",
+    "description": "6 publication-quality figures and 4 results tables from iteration-2 GEV experiments",
+    "n_figures": 6,
+    "n_tables": 4,
+    "tables": {
+      "gev_fit_summary": [
+        {
+          "Metric": "N bin-treebank combos",
+          "Value": "918"
+        },
+        {
+          "Metric": "GEV AIC-best (%)",
+          "Value": "95.2"
+        },
+        {
+          "Metric": "AD/KS pass rate (%)",
+          "Value": "28.2"
+        },
+        {
+          "Metric": "MLE-Lmom mean xi diff",
+          "Value": "0.0286"
+        },
+        {
+          "Metric": "Dual-track Spearman rho",
+          "Value": "0.9997"
+        },
+        {
+          "Metric": "Grambank cross-val Spearman r",
+          "Value": "0.340"
+        },
+        {
+          "Metric": "N treebanks analyzed",
+          "Value": "194"
+        },
+        {
+          "Metric": "N regression treebanks",
+          "Value": "172"
+        },
+        {
+          "Metric": "N language families",
+          "Value": "26"
+        },
+        {
+          "Metric": "EVT-unique pairs (%)",
+          "Value": "46.2"
+        },
+        {
+          "Metric": "Baseline mean-DD R-sq",
+          "Value": "0.048"
+        },
+        {
+          "Metric": "GEV pseudo-R-sq",
+          "Value": "0.163"
+        }
+      ],
+      "regression_coefficients": [
+        {
+          "Predictor": "Morph Richness",
+          "Beta": "-0.0271",
+          "SE": "0.0216",
+          "p": "0.209586",
+          "p_FDR": "0.209586",
+          "Significant (FDR)": "No",
+          "VIF": "1.36",
+          "Partial r": "-0.118"
+        },
+        {
+          "Predictor": "Head Direction Ratio",
+          "Beta": "-0.0311",
+          "SE": "0.0219",
+          "p": "0.156023",
+          "p_FDR": "0.209586",
+          "Significant (FDR)": "No",
+          "VIF": "1.10",
+          "Partial r": "-0.073"
+        },
+        {
+          "Predictor": "Word Order Entropy",
+          "Beta": "0.0840",
+          "SE": "0.0226",
+          "p": "0.000196",
+          "p_FDR": "0.000587",
+          "Significant (FDR)": "Yes",
+          "VIF": "1.38",
+          "Partial r": "0.246"
+        }
+      ],
+      "mediation_results": [
+        {
+          "Effect": "Indirect (a x b)",
+          "Estimate": "0.0288",
+          "CI Lower": "0.0091",
+          "CI Upper": "0.0551",
+          "Significant": "Yes"
+        },
+        {
+          "Effect": "Direct (c')",
+          "Estimate": "-0.0263",
+          "CI Lower": "-0.0570",
+          "CI Upper": "0.0011",
+          "Significant": "No"
+        },
+        {
+          "Effect": "Total (c)",
+          "Estimate": "0.0024",
+          "CI Lower": "—",
+          "CI Upper": "—",
+          "Significant": "—"
+        },
+        {
+          "Effect": "Proportion mediated",
+          "Estimate": "11.78",
+          "CI Lower": "—",
+          "CI Upper": "—",
+          "Significant": "—"
+        },
+        {
+          "Effect": "N valid bootstraps",
+          "Estimate": "5000",
+          "CI Lower": "—",
+          "CI Upper": "—",
+          "Significant": "—"
+        },
+        {
+          "Effect": "Interpretation",
+          "Estimate": "full_mediation",
+          "CI Lower": "—",
+          "CI Upper": "—",
+          "Significant": "—"
+        }
+      ],
+      "data_quality_summary": [
+        {
+          "Check": "Grambank-UD Spearman rho",
+          "Value": "0.2969",
+          "Status": "WEAK"
+        },
+        {
+          "Check": "Entropy threshold sensitivity (10 vs 20)",
+          "Value": "0.9999",
+          "Status": "Robust"
+        },
+        {
+          "Check": "Overall subset coverage",
+          "Value": "0.1983",
+          "Status": "OK"
+        },
+        {
+          "Check": "Autocorrelation proportion significant",
+          "Value": "0.2614",
+          "Status": "WARNING"
+        },
+        {
+          "Check": "Annotation confound (feat_completeness vs morph_richness)",
+          "Value": "0.7931",
+          "Status": "CRITICAL"
+        },
+        {
+          "Check": "Diagnostic flag 1",
+          "Value": "WARNING: 14 languages with feat_completeness < 0.3 may have artifactual morph_richness",
+          "Status": "FLAG"
+        },
+        {
+          "Check": "Diagnostic flag 2",
+          "Value": "CRITICAL: feat_completeness is a strong confound for morph_richness (rho > 0.7)",
+          "Status": "FLAG"
+        },
+        {
+          "Check": "Diagnostic flag 3",
+          "Value": "WARNING: >20% of bin-treebank combos show serial dependence",
+          "Status": "FLAG"
+        }
+      ]
+    }
+  },
+  "metrics_agg": {
+    "n_figures_generated": 6,
+    "n_tables_compiled": 4,
+    "total_data_points_plotted": 506,
+    "key_stats_verified": 1,
+    "figure_dpi_compliance": 1.0,
+    "mean_figure_file_size_kb": 215.96,
+    "n_treebanks_in_regression_figure": 172,
+    "n_discordant_languages_annotated": 6,
+    "n_families_color_coded": 6,
+    "bound_awareness_lengths_plotted": 6
+  },
+  "datasets": [
+    {
+      "dataset": "treebank_visualization",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "{\"xi_raw\": -0.26488070460429747, \"xi_norm\": -0.264882842208278, \"family_group\": \"Other\"}",
+          "predict_our_method": "{\"xi_raw\": -0.26488070460429747, \"xi_norm\": -0.264882842208278, \"n_bins\": 2, \"family_group\": \"Other\", \"in_regression\": false, \"is_discordant\": false}",
+          "eval_xi_raw": -0.26488070460429747,
+          "eval_xi_norm": -0.264882842208278,
+          "eval_xi_rank": 166,
+          "eval_in_regression": 0,
+          "eval_regression_residual": 0.0,
+          "eval_n_qualifying_bins": 2,
+          "eval_family_group": 5,
+          "eval_is_discordant": 0
+        },
+        {
+          "input": "af_afribooms",
+          "output": "{\"xi_raw\": -0.2674785393001198, \"xi_norm\": -0.26747921510483785, \"family_group\": \"Afro-Asiatic\"}",
+          "predict_our_method": "{\"xi_raw\": -0.2674785393001198, \"xi_norm\": -0.26747921510483785, \"n_bins\": 5, \"family_group\": \"Afro-Asiatic\", \"in_regression\": true, \"is_discordant\": false}",
+          "eval_xi_raw": -0.2674785393001198,
+          "eval_xi_norm": -0.26747921510483785,
+          "eval_xi_rank": 165,
+          "eval_in_regression": 1,
+          "eval_regression_residual": 0.0,
+          "eval_n_qualifying_bins": 5,
+          "eval_family_group": 1,
+          "eval_is_discordant": 0
+        },
+        {
+          "input": "akk_riao",
+          "output": "{\"xi_raw\": -0.3617299422041035, \"xi_norm\": -0.36173064320522047, \"family_group\": \"Afro-Asiatic\"}",
+          "predict_our_method": "{\"xi_raw\": -0.3617299422041035, \"xi_norm\": -0.36173064320522047, \"n_bins\": 3, \"family_group\": \"Afro-Asiatic\", \"in_regression\": true, \"is_discordant\": false}",
+          "eval_xi_raw": -0.3617299422041035,
+          "eval_xi_norm": -0.36173064320522047,
+          "eval_xi_rank": 129,
+          "eval_in_regression": 1,
+          "eval_regression_residual": 0.0,
+          "eval_n_qualifying_bins": 3,
+          "eval_family_group": 1,
+          "eval_is_discordant": 0
+        }
+      ]
+    },
+    {
+      "dataset": "figure_quality",
+      "examples": [
+        {
+          "input": "fig1_gev_fit_quality",
+          "output": "Figure 1: fig1_gev_fit_quality.png, 160.3 KB, 300 DPI",
+          "predict_our_method": "{\"figure_name\": \"fig1_gev_fit_quality.png\", \"file_size_kb\": 160.33, \"dpi\": 300, \"n_data_points\": 4, \"n_panels\": 2}",
+          "eval_figure_exists": 1,
+          "eval_file_size_kb": 160.33,
+          "eval_dpi": 300,
+          "eval_n_data_points": 4,
+          "eval_n_panels": 2,
+          "eval_has_annotations": 1,
+          "eval_color_palette_valid": 1
+        },
+        {
+          "input": "fig2_dual_track",
+          "output": "Figure 2: fig2_dual_track.png, 195.6 KB, 300 DPI",
+          "predict_our_method": "{\"figure_name\": \"fig2_dual_track.png\", \"file_size_kb\": 195.62, \"dpi\": 300, \"n_data_points\": 194, \"n_panels\": 1}",
+          "eval_figure_exists": 1,
+          "eval_file_size_kb": 195.62,
+          "eval_dpi": 300,
+          "eval_n_data_points": 194,
+          "eval_n_panels": 1,
+          "eval_has_annotations": 1,
+          "eval_color_palette_valid": 1
+        },
+        {
+          "input": "fig3_bound_awareness",
+          "output": "Figure 3: fig3_bound_awareness.png, 296.9 KB, 300 DPI",
+          "predict_our_method": "{\"figure_name\": \"fig3_bound_awareness.png\", \"file_size_kb\": 296.89, \"dpi\": 300, \"n_data_points\": 120, \"n_panels\": 6}",
+          "eval_figure_exists": 1,
+          "eval_file_size_kb": 296.89,
+          "eval_dpi": 300,
+          "eval_n_data_points": 120,
+          "eval_n_panels": 6,
+          "eval_has_annotations": 1,
+          "eval_color_palette_valid": 1
+        }
+      ]
+    },
+    {
+      "dataset": "results_tables",
+      "examples": [
+        {
+          "input": "gev_fit_summary",
+          "output": "[{\"Metric\": \"N bin-treebank combos\", \"Value\": \"918\"}, {\"Metric\": \"GEV AIC-best (%)\", \"Value\": \"95.2\"}, {\"Metric\": \"AD/KS pass rate (%)\", \"Value\": \"28.2\"}]",
+          "predict_our_method": "{\"table_name\": \"gev_fit_summary\", \"n_rows\": 12, \"n_columns\": 2, \"completeness\": 1.0}",
+          "eval_table_exists": 1,
+          "eval_n_rows": 12,
+          "eval_n_columns": 2,
+          "eval_values_verified": 1,
+          "eval_completeness": 1.0
+        },
+        {
+          "input": "regression_coefficients",
+          "output": "[{\"Predictor\": \"Morph Richness\", \"Beta\": \"-0.0271\", \"SE\": \"0.0216\", \"p\": \"0.209586\", \"p_FDR\": \"0.209586\", \"Significant (FDR)\": \"No\", \"VIF\": \"1.36\", \"Partial r\": \"-0.118\"}, {\"Predictor\": \"Head Direction Ratio\", \"Beta\": \"-0.0311\", \"SE\": \"0.0219\", \"p\": \"0.156023\", \"p_FDR\": \"0.209586\", \"Significant (FDR)\": \"No\", \"VIF\": \"1.10\", \"Partial r\": \"-0.073\"}, {\"Predictor\": \"Word Order Entropy\", \"Beta\": \"0.0840\", \"SE\": \"0.0226\", \"p\": \"0.000196\", \"p_FDR\": \"0.000587\", \"Significant (FDR)\": \"Yes\", \"VIF\": \"1.38\", \"Partial r\": \"0.246\"}]",
+          "predict_our_method": "{\"table_name\": \"regression_coefficients\", \"n_rows\": 3, \"n_columns\": 8, \"completeness\": 1.0}",
+          "eval_table_exists": 1,
+          "eval_n_rows": 3,
+          "eval_n_columns": 8,
+          "eval_values_verified": 1,
+          "eval_completeness": 1.0
+        },
+        {
+          "input": "mediation_results",
+          "output": "[{\"Effect\": \"Indirect (a x b)\", \"Estimate\": \"0.0288\", \"CI Lower\": \"0.0091\", \"CI Upper\": \"0.0551\", \"Significant\": \"Yes\"}, {\"Effect\": \"Direct (c')\", \"Estimate\": \"-0.0263\", \"CI Lower\": \"-0.0570\", \"CI Upper\": \"0.0011\", \"Significant\": \"No\"}, {\"Effect\": \"Total (c)\", \"Estimate\": \"0.0024\", \"CI Lower\": \"\\u2014\", \"CI Upper\": \"\\u2014\", \"Significant\": \"\\u2014\"}]",
+          "predict_our_method": "{\"table_name\": \"mediation_results\", \"n_rows\": 6, \"n_columns\": 5, \"completeness\": 1.0}",
+          "eval_table_exists": 1,
+          "eval_n_rows": 6,
+          "eval_n_columns": 5,
+          "eval_values_verified": 1,
+          "eval_completeness": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "bound_awareness_summary",
+      "examples": [
+        {
+          "input": "ar_padt__10",
+          "output": "Treebank: ar_padt, Length: 10 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.17211490707400537 | Null xi(L-mom): -0.6394890685472212 | Normalized obs xi: -0.1721 | Coles passes: Tru",
+          "predict_our_method": "{\"null_xi_lmom\": -0.6394890685472212, \"obs_xi_lmom\": -0.17211490707400537, \"xi_separation\": 0.467374, \"null_xi_range\": 0.1477, \"recommendation\": \"normalized_track_primary\"}",
+          "eval_null_xi_lmom": -0.6394890685472212,
+          "eval_obs_xi_lmom": -0.17211490707400537,
+          "eval_xi_separation": 0.467374,
+          "eval_above_viability_threshold": 0,
+          "eval_track_recommendation": 0
+        },
+        {
+          "input": "ar_padt__12",
+          "output": "Treebank: ar_padt, Length: 12 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -0.6849617921798175 | Null xi(L-mom): -0.745159513705082 | Normalized obs xi: -0.6850 | Coles passes: False",
+          "predict_our_method": "{\"null_xi_lmom\": -0.745159513705082, \"obs_xi_lmom\": -0.6849617921798175, \"xi_separation\": 0.060198, \"null_xi_range\": 0.2029, \"recommendation\": \"normalized_track_primary\"}",
+          "eval_null_xi_lmom": -0.745159513705082,
+          "eval_obs_xi_lmom": -0.6849617921798175,
+          "eval_xi_separation": 0.060198,
+          "eval_above_viability_threshold": 0,
+          "eval_track_recommendation": 0
+        },
+        {
+          "input": "ar_padt__14",
+          "output": "Treebank: ar_padt, Length: 14 | Trees: 100, Null linearizations: 50000 | Observed xi(L-mom): -1.1771343292834977 | Null xi(L-mom): -0.8223642305489676 | Normalized obs xi: -1.1771 | Coles passes: Fals",
+          "predict_our_method": "{\"null_xi_lmom\": -0.8223642305489676, \"obs_xi_lmom\": -1.1771343292834977, \"xi_separation\": -0.35477, \"null_xi_range\": 0.2735, \"recommendation\": \"raw_track_primary\"}",
+          "eval_null_xi_lmom": -0.8223642305489676,
+          "eval_obs_xi_lmom": -1.1771343292834977,
+          "eval_xi_separation": -0.35477,
+          "eval_above_viability_threshold": 1,
+          "eval_track_recommendation": 1
+        }
+      ]
+    }
+  ]
+}

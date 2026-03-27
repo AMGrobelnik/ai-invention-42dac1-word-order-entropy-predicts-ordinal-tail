@@ -1,0 +1,464 @@
+{
+  "metadata": {
+    "evaluation_name": "Family Audit and Sensitivity Analysis",
+    "description": "Multi-track sensitivity analysis evaluating robustness of GEV tail-constraint findings: family audit with Glottolog corrections, GoF-restricted re-analysis, annotation-quality filtering, leave-one-family-out CV, residual analysis, and spoken/written comparison.",
+    "family_audit": {
+      "n_corrections": 1,
+      "corrections_list": [
+        {
+          "treebank_id": "af_afribooms",
+          "iso_code": "af",
+          "old_family": "Afro-Asiatic",
+          "new_family": "Indo-European",
+          "source": "manual_override"
+        }
+      ],
+      "afrikaans_fixed": true,
+      "n_families_after": 26
+    },
+    "corrected_regression": {
+      "fallback_notes": [],
+      "model_type": "mixed_effects",
+      "coefficients": {
+        "morph_richness_z": {
+          "beta": -0.027272572017511276,
+          "se": 0.021519733284234087,
+          "p": 0.20503784210706355,
+          "p_fdr": 0.20503784210706355,
+          "reject_fdr": false
+        },
+        "head_direction_ratio_z": {
+          "beta": -0.030370819850152865,
+          "se": 0.021960288818951932,
+          "p": 0.16666849042885468,
+          "p_fdr": 0.20503784210706355,
+          "reject_fdr": false
+        },
+        "word_order_entropy_z": {
+          "beta": 0.08351969000790412,
+          "se": 0.022646424531605452,
+          "p": 0.00022603634317136574,
+          "p_fdr": 0.0006781090295140973,
+          "reject_fdr": true
+        }
+      },
+      "pseudo_r2": 0.16385689068983567,
+      "n_treebanks": 172,
+      "n_families": 26
+    },
+    "gof_restricted": {
+      "gof_n_combos_total": 918,
+      "gof_n_combos_passing": 259,
+      "gof_pass_rate": 28.21350762527233,
+      "gof_n_treebanks_retained": 120,
+      "gof_regression": {
+        "fallback_notes": [],
+        "model_type": "mixed_effects",
+        "coefficients": {
+          "morph_richness_z": {
+            "beta": 0.0060264265501877474,
+            "se": 0.015696393425473455,
+            "p": 0.7010251256355393,
+            "p_fdr": 0.7010251256355393,
+            "reject_fdr": false
+          },
+          "head_direction_ratio_z": {
+            "beta": 0.048587144067305896,
+            "se": 0.018550342274308202,
+            "p": 0.008813503737634147,
+            "p_fdr": 0.026440511212902442,
+            "reject_fdr": false
+          },
+          "word_order_entropy_z": {
+            "beta": -0.014346941770588097,
+            "se": 0.019831371790535696,
+            "p": 0.46940544885504953,
+            "p_fdr": 0.7010251256355393,
+            "reject_fdr": false
+          }
+        },
+        "pseudo_r2": 0.06463415435002728,
+        "n_treebanks": 104,
+        "n_families": 22
+      },
+      "gof_mediation": {
+        "indirect_effect_mean": 0.0022820710663535295,
+        "indirect_effect_ci": [
+          -0.0103902278603168,
+          0.01766292010035116
+        ],
+        "indirect_significant": false,
+        "direct_effect_mean": -0.018295987089826188,
+        "direct_effect_ci": [
+          -0.051460713313784365,
+          0.013357498337314602
+        ],
+        "direct_significant": false,
+        "total_effect_mean": -0.016013916023472657,
+        "n_valid_bootstraps": 5000,
+        "interpretation": "no_effect"
+      }
+    },
+    "annotation_sensitivity": {
+      "annot_n_treebanks": 131,
+      "annot_n_dropped": 41,
+      "annot_regression": {
+        "fallback_notes": [],
+        "model_type": "mixed_effects",
+        "coefficients": {
+          "morph_richness_z": {
+            "beta": 0.013627617387897493,
+            "se": 0.018052878543291247,
+            "p": 0.45032562618569993,
+            "p_fdr": 0.45032562618569993,
+            "reject_fdr": false
+          },
+          "head_direction_ratio_z": {
+            "beta": -0.019807193180322088,
+            "se": 0.017246269092328726,
+            "p": 0.25076572666206043,
+            "p_fdr": 0.37614858999309064,
+            "reject_fdr": false
+          },
+          "word_order_entropy_z": {
+            "beta": 0.04662286970084546,
+            "se": 0.017971929298470458,
+            "p": 0.009480992409816173,
+            "p_fdr": 0.02844297722944852,
+            "reject_fdr": false
+          }
+        },
+        "pseudo_r2": 0.05654226886699787,
+        "n_treebanks": 131,
+        "n_families": 20
+      },
+      "annot_mediation": {
+        "indirect_effect_mean": 0.015741062453191228,
+        "indirect_effect_ci": [
+          0.0016267064223644235,
+          0.032221418238771476
+        ],
+        "indirect_significant": true,
+        "direct_effect_mean": 0.01783799414992864,
+        "direct_effect_ci": [
+          -0.013363552750604111,
+          0.04857315099107934
+        ],
+        "direct_significant": false,
+        "total_effect_mean": 0.03357905660311986,
+        "n_valid_bootstraps": 5000,
+        "interpretation": "full_mediation"
+      },
+      "annot_morph_entropy_corr": 0.4062125909331712,
+      "annot_morph_entropy_corr_p": 1.479507528518297e-06,
+      "full_morph_entropy_corr": 0.45569635182889817
+    },
+    "lofo_cv": {
+      "lofo_n_families": 26,
+      "lofo_n_skipped": 0,
+      "lofo_skipped_families": [],
+      "lofo_entropy_beta_mean": 0.08420598032986183,
+      "lofo_entropy_beta_sd": 0.01176038231636906,
+      "lofo_entropy_beta_min": 0.039778843168791427,
+      "lofo_entropy_beta_max": 0.12282588148491172,
+      "lofo_entropy_beta_range": 0.08304703831612029,
+      "lofo_most_influential_family": "Tucanoan",
+      "lofo_family_betas": {
+        "Atlantic-Congo": 0.08280175114880467,
+        "Indo-European": 0.12282588148491172,
+        "Afro-Asiatic": 0.07708536030757339,
+        "Uto-Aztecan": 0.08537607493655047,
+        "Bororoan": 0.08337222209326556,
+        "Austronesian": 0.08899912429625893,
+        "Mongolic-Khitan": 0.08409429672208732,
+        "Sino-Tibetan": 0.08623138347473062,
+        "Uralic": 0.08722239038728824,
+        "Kartvelian": 0.08479735096231378,
+        "Narrow Talodi": 0.08555110507523911,
+        "Huitotoan": 0.08382036246521152,
+        "Japonic": 0.08703045020168262,
+        "Khoe-Kwadi": 0.08557940509042224,
+        "Koreanic": 0.0808145390173702,
+        "Tucanoan": 0.039778843168791427,
+        "Tupian": 0.08686663285366694,
+        "Chocoan": 0.08465916919527358,
+        "Chibchan": 0.08333304356316823,
+        "Dravidian": 0.08456645543895931,
+        "Austroasiatic": 0.08481030441843838,
+        "Nuclear Trans New Guinea": 0.08396981792960148,
+        "Pano-Tacanan": 0.08458203803338028,
+        "Tai-Kadai": 0.08190951750720948,
+        "Turkic": 0.08556525200549013,
+        "Pama-Nyungan": 0.0837127167987185
+      },
+      "lofo_all_significant": false,
+      "lofo_pct_significant": 92.3076923076923
+    },
+    "residual_analysis": {
+      "residual_turkish_rank": 61,
+      "residual_turkish_relative": 0.4187180658805117,
+      "residual_top10": [
+        {
+          "treebank_id": "gv_cadhan",
+          "language": "Manx",
+          "xi": -2.2154104327881794,
+          "predicted_xi": -0.6136295327465515,
+          "residual": -1.6017809000416279,
+          "relative_residual": 0.7230176748900315,
+          "morph_richness": 1.1087,
+          "word_order_entropy": 0.1087
+        },
+        {
+          "treebank_id": "ga_idt",
+          "language": "Irish",
+          "xi": -1.5653013767009056,
+          "predicted_xi": -0.5202576564180817,
+          "residual": -1.0450437202828238,
+          "relative_residual": 0.6676309979905604,
+          "morph_richness": 2.1622,
+          "word_order_entropy": 0.2796
+        },
+        {
+          "treebank_id": "hbo_ptnk",
+          "language": "Ancient-Hebrew",
+          "xi": -1.1518216792049654,
+          "predicted_xi": -0.5418702703177062,
+          "residual": -0.6099514088872592,
+          "relative_residual": 0.529553679965698,
+          "morph_richness": 1.7951,
+          "word_order_entropy": 0.2155
+        },
+        {
+          "treebank_id": "cy_ccg",
+          "language": "Welsh",
+          "xi": -0.9522754320798914,
+          "predicted_xi": -0.48984296371535596,
+          "residual": -0.46243246836453544,
+          "relative_residual": 0.48560789534864274,
+          "morph_richness": 1.5682,
+          "word_order_entropy": 0.2835
+        },
+        {
+          "treebank_id": "en_atis",
+          "language": "English",
+          "xi": -0.1048438313286888,
+          "predicted_xi": -0.5215862786142852,
+          "residual": 0.4167424472855964,
+          "relative_residual": 3.974887620990265,
+          "morph_richness": 1.0251,
+          "word_order_entropy": 0.1659
+        },
+        {
+          "treebank_id": "th_tud",
+          "language": "Thai",
+          "xi": -0.09438002186181538,
+          "predicted_xi": -0.49721704802627614,
+          "residual": 0.40283702616446077,
+          "relative_residual": 4.268244679517733,
+          "morph_richness": 0.0052,
+          "word_order_entropy": 0.2562
+        },
+        {
+          "treebank_id": "th_pud",
+          "language": "Thai",
+          "xi": -0.08534607828482028,
+          "predicted_xi": -0.4818329636066204,
+          "residual": 0.39648688532180015,
+          "relative_residual": 4.645636838738255,
+          "morph_richness": 0.1418,
+          "word_order_entropy": 0.2784
+        },
+        {
+          "treebank_id": "is_modern",
+          "language": "Icelandic",
+          "xi": -0.02877803887711696,
+          "predicted_xi": -0.4087246423702226,
+          "residual": 0.37994660349310566,
+          "relative_residual": 13.20265794050416,
+          "morph_richness": 2.4463,
+          "word_order_entropy": 0.4463
+        },
+        {
+          "treebank_id": "ja_gsd",
+          "language": "Japanese",
+          "xi": -0.19847226405985585,
+          "predicted_xi": -0.5734328871322882,
+          "residual": 0.3749606230724324,
+          "relative_residual": 1.8892343716064561,
+          "morph_richness": 0.0056,
+          "word_order_entropy": 0.0412
+        },
+        {
+          "treebank_id": "sme_giella",
+          "language": "North-Sámi",
+          "xi": -0.7176178664158047,
+          "predicted_xi": -0.36146560431853947,
+          "residual": -0.35615226209726525,
+          "relative_residual": 0.4962979306467019,
+          "morph_richness": 1.9649,
+          "word_order_entropy": 0.5306
+        }
+      ],
+      "residual_mean_abs": 0.14730474085390927,
+      "residual_median_abs": 0.10627927440937135
+    },
+    "spoken_written": {
+      "pairs": [
+        {
+          "language": "Slovenian",
+          "spoken_tb": "sl_sst",
+          "written_tb": "sl_ssj",
+          "xi_spoken": -0.3313269229548899,
+          "xi_written": -0.38701811900215244,
+          "diff": 0.055691196047262526,
+          "cohens_d": 2.7368045870036903,
+          "d_ci": [
+            2.3359315431397083,
+            3.2050840658703095
+          ],
+          "spoken_less_negative": true
+        },
+        {
+          "language": "French",
+          "spoken_tb": "fr_parisstories",
+          "written_tb": "fr_gsd",
+          "xi_spoken": -0.3031674656758668,
+          "xi_written": -0.42376898855350803,
+          "diff": 0.12060152287764125,
+          "cohens_d": 5.006438067235384,
+          "d_ci": [
+            4.1672865012158455,
+            5.84800087458253
+          ],
+          "spoken_less_negative": true
+        }
+      ],
+      "sw_n_viable_pairs": 2,
+      "sw_consistent_direction": true
+    },
+    "synthesis": {
+      "overall_entropy_robust": false,
+      "overall_mediation_robust": false,
+      "n_sensitivity_tracks_entropy_significant": 1,
+      "tracks_significant": {
+        "corrected": true,
+        "gof_restricted": false,
+        "annotation_filtered": false,
+        "lofo_all": false
+      }
+    }
+  },
+  "metrics_agg": {
+    "family_audit_n_corrections": 1,
+    "family_audit_afrikaans_fixed": 1,
+    "family_audit_n_families_after": 26,
+    "corrected_reg_entropy_beta": 0.08351969000790412,
+    "corrected_reg_entropy_p_fdr": 0.0006781090295140973,
+    "corrected_reg_entropy_reject_fdr": 1,
+    "corrected_reg_morph_beta": -0.027272572017511276,
+    "corrected_reg_morph_p_fdr": 0.20503784210706355,
+    "corrected_reg_hd_beta": -0.030370819850152865,
+    "corrected_reg_hd_p_fdr": 0.20503784210706355,
+    "corrected_reg_pseudo_r2": 0.16385689068983567,
+    "corrected_reg_n_treebanks": 172,
+    "corrected_reg_n_families": 26,
+    "corrected_vs_original_entropy_beta_diff": 0.00048030999209588976,
+    "gof_n_combos_passing": 259,
+    "gof_n_treebanks_retained": 120,
+    "gof_reg_entropy_beta": -0.014346941770588097,
+    "gof_reg_entropy_p_fdr": 0.7010251256355393,
+    "gof_reg_entropy_significant": 0,
+    "gof_reg_pseudo_r2": 0.06463415435002728,
+    "gof_mediation_indirect_significant": 0,
+    "annot_n_treebanks": 131,
+    "annot_n_dropped": 41,
+    "annot_reg_entropy_beta": 0.04662286970084546,
+    "annot_reg_entropy_p_fdr": 0.02844297722944852,
+    "annot_reg_morph_beta": 0.013627617387897493,
+    "annot_reg_morph_p_fdr": 0.45032562618569993,
+    "annot_reg_pseudo_r2": 0.05654226886699787,
+    "annot_morph_entropy_corr": 0.4062125909331712,
+    "lofo_n_families": 26,
+    "lofo_entropy_beta_mean": 0.08420598032986183,
+    "lofo_entropy_beta_sd": 0.01176038231636906,
+    "lofo_entropy_beta_min": 0.039778843168791427,
+    "lofo_entropy_beta_max": 0.12282588148491172,
+    "lofo_entropy_beta_range": 0.08304703831612029,
+    "lofo_all_significant": 0,
+    "lofo_pct_significant": 92.3076923076923,
+    "residual_turkish_rank": 61,
+    "residual_turkish_relative": 0.4187180658805117,
+    "residual_mean_abs": 0.14730474085390927,
+    "residual_median_abs": 0.10627927440937135,
+    "sw_slovenian_d": 2.7368045870036903,
+    "sw_slovenian_xi_spoken": -0.3313269229548899,
+    "sw_slovenian_xi_written": -0.38701811900215244,
+    "sw_french_d": 5.006438067235384,
+    "sw_french_xi_spoken": -0.3031674656758668,
+    "sw_french_xi_written": -0.42376898855350803,
+    "sw_n_viable_pairs": 2,
+    "sw_consistent_direction": 1,
+    "overall_entropy_robust": 0,
+    "overall_mediation_robust": 0,
+    "n_sensitivity_tracks_entropy_significant": 1,
+    "corrected_vs_original_entropy_ci_overlap": 1
+  },
+  "datasets": [
+    {
+      "dataset": "sensitivity_analysis",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "{\"old_family\": \"Atlantic-Congo\", \"new_family\": \"Atlantic-Congo\", \"family_corrected\": \"Atlantic-Congo\", \"xi_full\": -0.26488070460429747, \"xi_gof_restricted\": -0.3148080936774954, \"xi_residual\": 0.16854507341163072, \"in_annot_subset\": true}",
+          "metadata_treebank_id": "ab_abnc",
+          "metadata_language": "Abkhaz",
+          "metadata_old_family": "Atlantic-Congo",
+          "metadata_new_family": "Atlantic-Congo",
+          "metadata_correction_applied": false,
+          "metadata_xi_full": -0.26488070460429747,
+          "metadata_xi_gof": -0.3148080936774954,
+          "metadata_feat_completeness": 0.6183,
+          "metadata_fold": "evaluation",
+          "predict_our_method": "{\"xi_full\": -0.26488070460429747, \"xi_gof_restricted\": -0.3148080936774954, \"family_corrected\": \"Atlantic-Congo\"}",
+          "eval_xi_full": -0.26488070460429747,
+          "eval_xi_gof": -0.3148080936774954,
+          "eval_residual": 0.16854507341163072
+        },
+        {
+          "input": "af_afribooms",
+          "output": "{\"old_family\": \"Afro-Asiatic\", \"new_family\": \"Indo-European\", \"family_corrected\": \"Indo-European\", \"xi_full\": -0.2674785393001198, \"xi_gof_restricted\": -0.23196776200766375, \"xi_residual\": 0.08657454942947279, \"in_annot_subset\": true}",
+          "metadata_treebank_id": "af_afribooms",
+          "metadata_language": "Afrikaans",
+          "metadata_old_family": "Afro-Asiatic",
+          "metadata_new_family": "Indo-European",
+          "metadata_correction_applied": true,
+          "metadata_xi_full": -0.2674785393001198,
+          "metadata_xi_gof": -0.23196776200766375,
+          "metadata_feat_completeness": 0.8248,
+          "metadata_fold": "evaluation",
+          "predict_our_method": "{\"xi_full\": -0.2674785393001198, \"xi_gof_restricted\": -0.23196776200766375, \"family_corrected\": \"Indo-European\"}",
+          "eval_xi_full": -0.2674785393001198,
+          "eval_xi_gof": -0.23196776200766375,
+          "eval_residual": 0.08657454942947279
+        },
+        {
+          "input": "akk_riao",
+          "output": "{\"old_family\": \"Afro-Asiatic\", \"new_family\": \"Afro-Asiatic\", \"family_corrected\": \"Afro-Asiatic\", \"xi_full\": -0.3617299422041035, \"xi_gof_restricted\": -0.16521434075374575, \"xi_residual\": 0.26746062932408565, \"in_annot_subset\": true}",
+          "metadata_treebank_id": "akk_riao",
+          "metadata_language": "Akkadian",
+          "metadata_old_family": "Afro-Asiatic",
+          "metadata_new_family": "Afro-Asiatic",
+          "metadata_correction_applied": false,
+          "metadata_xi_full": -0.3617299422041035,
+          "metadata_xi_gof": -0.16521434075374575,
+          "metadata_feat_completeness": 0.7546,
+          "metadata_fold": "evaluation",
+          "predict_our_method": "{\"xi_full\": -0.3617299422041035, \"xi_gof_restricted\": -0.16521434075374575, \"family_corrected\": \"Afro-Asiatic\"}",
+          "eval_xi_full": -0.3617299422041035,
+          "eval_xi_gof": -0.16521434075374575,
+          "eval_residual": 0.26746062932408565
+        }
+      ]
+    }
+  ]
+}

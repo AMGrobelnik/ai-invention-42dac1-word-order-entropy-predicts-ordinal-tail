@@ -1,0 +1,72 @@
+{
+  "datasets": [
+    {
+      "dataset": "ud_maxdd_typology",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "",
+          "metadata_row_type": "treebank",
+          "metadata_treebank_id": "ab_abnc",
+          "metadata_language": "Abkhaz",
+          "metadata_iso_code": "ab",
+          "metadata_morph_richness": 3.4527,
+          "metadata_head_direction_ratio": 0.3475,
+          "metadata_word_order_entropy": 0.3681,
+          "metadata_nonprojectivity_rate": 0.019,
+          "metadata_feat_completeness": 0.6183,
+          "metadata_genre": "mixed",
+          "metadata_modality": "written",
+          "metadata_n_sentences_total": 1316,
+          "metadata_n_per_bin": "{\"10\": 81, \"12\": 66, \"14\": 31, \"16\": 28, \"18\": 16, \"20\": 5}",
+          "metadata_qualifies_per_bin": "{\"10\": true, \"12\": true, \"14\": false, \"16\": false, \"18\": false, \"20\": false}",
+          "metadata_mean_dd_all": 1.9726,
+          "metadata_per_relation_entropy": "{\"nsubj\": 0.726359, \"advmod\": 0.369485, \"obj\": 0.118241, \"conj\": 0.0, \"obl\": 0.257086, \"advcl:conv\": 0.349349, \"advcl\": 0.501025, \"iobj:lo\": 0.201704, \"case\": 0.0, \"nmod:poss\": 0.120154, \"acl:relcl\": 0.496418, \"ccomp:quote\": 0.287923, \"csubj\": 0.94566, \"amod\": 0.939255, \"iobj\": 0.341714, \"cop\": 0.0, \"advcl:seq\": 0.0, \"advcl:quote\": 0.400576, \"ccomp:obj\": 0.46507, \"parataxis\": 0.237508}",
+          "metadata_fold": "treebank_summary"
+        },
+        {
+          "input": "af_afribooms",
+          "output": "",
+          "metadata_row_type": "treebank",
+          "metadata_treebank_id": "af_afribooms",
+          "metadata_language": "Afrikaans",
+          "metadata_iso_code": "af",
+          "metadata_morph_richness": 1.4847,
+          "metadata_head_direction_ratio": 0.4139,
+          "metadata_word_order_entropy": 0.451,
+          "metadata_nonprojectivity_rate": 0.0636,
+          "metadata_feat_completeness": 0.8248,
+          "metadata_genre": "mixed",
+          "metadata_modality": "written",
+          "metadata_n_sentences_total": 1934,
+          "metadata_n_per_bin": "{\"10\": 40, \"12\": 59, \"14\": 76, \"16\": 76, \"18\": 77, \"20\": 67}",
+          "metadata_qualifies_per_bin": "{\"10\": false, \"12\": true, \"14\": true, \"16\": true, \"18\": true, \"20\": true}",
+          "metadata_mean_dd_all": 3.1277,
+          "metadata_per_relation_entropy": "{\"case\": 0.183281, \"det\": 0.006236, \"amod\": 0.857726, \"obl\": 0.999971, \"nmod\": 0.449849, \"obj\": 0.760062, \"nsubj\": 0.19272, \"conj\": 0.0, \"advmod\": 0.845147, \"cc\": 0.355371, \"dep\": 0.701471, \"aux\": 0.76777, \"mark\": 0.444658, \"ccomp\": 0.234606, \"aux:pass\": 0.65408, \"cop\": 0.999998, \"nsubj:pass\": 0.020886, \"xcomp\": 0.54452, \"compound:prt\": 0.950956, \"flat\": 0.0}",
+          "metadata_fold": "treebank_summary"
+        },
+        {
+          "input": "akk_riao",
+          "output": "",
+          "metadata_row_type": "treebank",
+          "metadata_treebank_id": "akk_riao",
+          "metadata_language": "Akkadian",
+          "metadata_iso_code": "akk",
+          "metadata_morph_richness": 2.621,
+          "metadata_head_direction_ratio": 0.5746,
+          "metadata_word_order_entropy": 0.1086,
+          "metadata_nonprojectivity_rate": 0.0288,
+          "metadata_feat_completeness": 0.7546,
+          "metadata_genre": "mixed",
+          "metadata_modality": "written",
+          "metadata_n_sentences_total": 1874,
+          "metadata_n_per_bin": "{\"10\": 100, \"12\": 91, \"14\": 65, \"16\": 28, \"18\": 47, \"20\": 27}",
+          "metadata_qualifies_per_bin": "{\"10\": true, \"12\": true, \"14\": true, \"16\": false, \"18\": false, \"20\": false}",
+          "metadata_mean_dd_all": 2.4597,
+          "metadata_per_relation_entropy": "{\"nmod:poss\": 0.017398, \"case\": 0.0, \"conj\": 0.0, \"obl\": 0.231985, \"det:poss\": 0.0, \"appos\": 0.0, \"obj\": 0.452726, \"amod\": 0.203229, \"nmod\": 0.016376, \"nsubj\": 0.115211, \"cc\": 0.0, \"nummod\": 0.546876, \"dep\": 0.921996, \"acl:relcl\": 0.0, \"advmod\": 0.289986, \"advmod:emph\": 0.046999, \"det\": 0.0, \"advcl\": 0.591673, \"xcomp\": 0.253878, \"mark\": 0.0}",
+          "metadata_fold": "treebank_summary"
+        }
+      ]
+    }
+  ]
+}

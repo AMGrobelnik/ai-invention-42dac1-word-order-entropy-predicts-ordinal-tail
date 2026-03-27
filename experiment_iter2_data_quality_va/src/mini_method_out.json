@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "method_name": "data_quality_validation",
+    "description": "Per-treebank validation combining six analyses: Grambank cross-validation, entropy threshold sensitivity, representativeness, autocorrelation, annotation confound, and family bias diagnostics.",
+    "n_treebanks": 238,
+    "global_summary": {
+      "grambank_spearman_rho": 0.2969,
+      "grambank_interpretation": "WEAK",
+      "entropy_spearman_10v20": 0.9999,
+      "entropy_is_robust": true,
+      "overall_coverage": 0.1983,
+      "autocorr_proportion_significant": 0.2614,
+      "confound_rho": 0.7931,
+      "is_confound": "True",
+      "diagnostic_flags": [
+        "WARNING: 14 languages with feat_completeness < 0.3 may have artifactual morph_richness",
+        "CRITICAL: feat_completeness is a strong confound for morph_richness (rho > 0.7)",
+        "WARNING: >20% of bin-treebank combos show serial dependence"
+      ]
+    },
+    "timestamp": "2026-03-27T06:29:31"
+  },
+  "datasets": [
+    {
+      "dataset": "data_quality_validation",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "{\"morph_richness\": 3.4527, \"word_order_entropy\": 0.3681, \"feat_completeness\": 0.6183, \"mean_dd_all\": 1.9726, \"n_sentences_total\": 1316, \"n_binned\": 227, \"coverage\": 0.1725, \"modality\": \"written\", \"genre\": \"mixed\"}",
+          "predict_comprehensive_validation": "{\"grambank\": {\"ud_morph_richness\": 3.4527, \"grambank_morph_index\": 0.3976, \"in_overlap\": true}, \"entropy\": {\"entropy_threshold_10\": 0.368067, \"entropy_threshold_20\": 0.369984, \"n_relations_dropped\": 7, \"abs_diff\": 0.001917}, \"representativeness\": {\"coverage\": 0.1725, \"low_coverage\": false}, \"autocorrelation\": {\"n_bins_tested\": 2, \"n_bins_significant\": 0, \"has_autocorrelation\": false}, \"annotation_confound\": {\"feat_completeness\": 0.6183, \"is_low\": false, \"global_confound_detected\": \"True\"}, \"quality_flags\": [], \"n_flags\": 0, \"overall_quality\": \"GOOD\"}",
+          "predict_baseline_range_check": "{\"all_in_range\": true, \"flags\": [], \"n_flags\": 0, \"overall_quality\": \"PASS\"}",
+          "metadata_language": "Abkhaz",
+          "metadata_iso_code": "ab",
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_morph_richness": 3.4527,
+          "metadata_word_order_entropy": 0.3681,
+          "metadata_feat_completeness": 0.6183,
+          "metadata_n_quality_flags": 0
+        },
+        {
+          "input": "af_afribooms",
+          "output": "{\"morph_richness\": 1.4847, \"word_order_entropy\": 0.451, \"feat_completeness\": 0.8248, \"mean_dd_all\": 3.1277, \"n_sentences_total\": 1934, \"n_binned\": 395, \"coverage\": 0.2042, \"modality\": \"written\", \"genre\": \"mixed\"}",
+          "predict_comprehensive_validation": "{\"grambank\": {\"in_overlap\": false}, \"entropy\": {\"computed\": false}, \"representativeness\": {\"coverage\": 0.2042, \"low_coverage\": false}, \"autocorrelation\": {\"n_bins_tested\": 5, \"n_bins_significant\": 1, \"has_autocorrelation\": true}, \"annotation_confound\": {\"feat_completeness\": 0.8248, \"is_low\": false, \"global_confound_detected\": \"True\"}, \"quality_flags\": [\"autocorrelation_detected\"], \"n_flags\": 1, \"overall_quality\": \"ACCEPTABLE\"}",
+          "predict_baseline_range_check": "{\"all_in_range\": true, \"flags\": [], \"n_flags\": 0, \"overall_quality\": \"PASS\"}",
+          "metadata_language": "Afrikaans",
+          "metadata_iso_code": "af",
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_morph_richness": 1.4847,
+          "metadata_word_order_entropy": 0.451,
+          "metadata_feat_completeness": 0.8248,
+          "metadata_n_quality_flags": 1
+        },
+        {
+          "input": "akk_riao",
+          "output": "{\"morph_richness\": 2.621, \"word_order_entropy\": 0.1086, \"feat_completeness\": 0.7546, \"mean_dd_all\": 2.4597, \"n_sentences_total\": 1874, \"n_binned\": 358, \"coverage\": 0.191, \"modality\": \"written\", \"genre\": \"mixed\"}",
+          "predict_comprehensive_validation": "{\"grambank\": {\"ud_morph_richness\": 2.621, \"grambank_morph_index\": 0.4211, \"in_overlap\": true}, \"entropy\": {\"entropy_threshold_10\": 0.108649, \"entropy_threshold_20\": 0.1089, \"n_relations_dropped\": 3, \"abs_diff\": 0.000251}, \"representativeness\": {\"coverage\": 0.191, \"low_coverage\": false}, \"autocorrelation\": {\"n_bins_tested\": 3, \"n_bins_significant\": 0, \"has_autocorrelation\": false}, \"annotation_confound\": {\"feat_completeness\": 0.7546, \"is_low\": false, \"global_confound_detected\": \"True\"}, \"quality_flags\": [], \"n_flags\": 0, \"overall_quality\": \"GOOD\"}",
+          "predict_baseline_range_check": "{\"all_in_range\": true, \"flags\": [], \"n_flags\": 0, \"overall_quality\": \"PASS\"}",
+          "metadata_language": "Akkadian",
+          "metadata_iso_code": "akk",
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_morph_richness": 2.621,
+          "metadata_word_order_entropy": 0.1086,
+          "metadata_feat_completeness": 0.7546,
+          "metadata_n_quality_flags": 0
+        }
+      ]
+    }
+  ]
+}

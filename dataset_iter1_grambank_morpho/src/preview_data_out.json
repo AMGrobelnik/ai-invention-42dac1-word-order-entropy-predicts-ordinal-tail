@@ -1,0 +1,69 @@
+{
+  "datasets": [
+    {
+      "dataset": "grambank_morph_complexity_ud",
+      "examples": [
+        {
+          "input": "aah",
+          "output": "{\"grambank_morph_index\": 0.3012, \"grambank_morph_richness_raw\": 25, \"n_morph_features_coded\": 83, \"n_morph_features_present\": 25, \"individual_feature_values\": {\"GB028\": 0, \"GB030\": 1, \"GB031\": 0, \"GB0...",
+          "metadata_fold": "all",
+          "metadata_iso639_3_code": "aah",
+          "metadata_glottocode": "abua1245",
+          "metadata_language_name": "Abu' Arapesh",
+          "metadata_family_name": "Nuclear Torricelli",
+          "metadata_macroarea": "Papunesia",
+          "metadata_ud_treebanks": [],
+          "metadata_has_grambank": true,
+          "metadata_has_ud": false,
+          "metadata_grambank_morph_feature_ids_used": [
+            "GB028",
+            "GB030",
+            "GB031"
+          ],
+          "metadata_latitude": -3.46,
+          "metadata_longitude": 142.92
+        },
+        {
+          "input": "aal",
+          "output": "{\"grambank_morph_index\": 0.3333, \"grambank_morph_richness_raw\": 11, \"n_morph_features_coded\": 33, \"n_morph_features_present\": 11, \"individual_feature_values\": {\"GB028\": 0, \"GB030\": 0, \"GB031\": 0, \"GB0...",
+          "metadata_fold": "all",
+          "metadata_iso639_3_code": "aal",
+          "metadata_glottocode": "afad1236",
+          "metadata_language_name": "Afade",
+          "metadata_family_name": "Afro-Asiatic",
+          "metadata_macroarea": "Africa",
+          "metadata_ud_treebanks": [],
+          "metadata_has_grambank": true,
+          "metadata_has_ud": false,
+          "metadata_grambank_morph_feature_ids_used": [
+            "GB028",
+            "GB030",
+            "GB031"
+          ],
+          "metadata_latitude": 12.06,
+          "metadata_longitude": 14.63
+        },
+        {
+          "input": "aar",
+          "output": "{\"grambank_morph_index\": 0.3103, \"grambank_morph_richness_raw\": 27, \"n_morph_features_coded\": 87, \"n_morph_features_present\": 27, \"individual_feature_values\": {\"GB028\": 0, \"GB030\": 1, \"GB031\": 0, \"GB0...",
+          "metadata_fold": "all",
+          "metadata_iso639_3_code": "aar",
+          "metadata_glottocode": "afar1241",
+          "metadata_language_name": "Afar",
+          "metadata_family_name": "Afro-Asiatic",
+          "metadata_macroarea": "Africa",
+          "metadata_ud_treebanks": [],
+          "metadata_has_grambank": true,
+          "metadata_has_ud": false,
+          "metadata_grambank_morph_feature_ids_used": [
+            "GB028",
+            "GB030",
+            "GB031"
+          ],
+          "metadata_latitude": 12.23,
+          "metadata_longitude": 41.81
+        }
+      ]
+    }
+  ]
+}

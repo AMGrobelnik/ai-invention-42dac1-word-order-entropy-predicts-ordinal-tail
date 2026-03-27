@@ -1,0 +1,17 @@
+[project]
+name = "grambank-morph-complexity-ud"
+version = "1.0.0"
+requires-python = ">=3.11,<3.12"
+description = "Grambank morphosyntactic complexity index mapped to Universal Dependencies languages"
+dependencies = [
+    "certifi==2026.2.25",
+    "charset-normalizer==3.4.6",
+    "idna==3.11",
+    "loguru==0.7.3",
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "python-dateutil==2.9.0.post0",
+    "requests==2.33.0",
+    "six==1.17.0",
+    "urllib3==2.6.3",
+]

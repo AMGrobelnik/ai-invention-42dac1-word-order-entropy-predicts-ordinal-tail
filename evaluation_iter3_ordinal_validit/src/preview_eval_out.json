@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "evaluation_name": "Ordinal Validity of GEV xi",
+    "description": "Evaluates single-sentence GEV xi as ordinal index via bootstrap stability, rank regression, permutation, and simulation recovery.",
+    "n_bootstrap": 500,
+    "n_permutations": 10000,
+    "n_synthetic": 100,
+    "sample_sizes": [
+      50,
+      100,
+      200
+    ],
+    "xi_range": [
+      -1.5,
+      -0.1
+    ],
+    "verdict": "FAILED",
+    "mechanistic_summary": "Negative correlations between single-sentence and super-block xi arise because max-of-max operations on bounded integer max_DD data produce ceiling concentration: super-block maxima cluster near the u..."
+  },
+  "metrics_agg": {
+    "k20_raw_rho": -0.3908655898092518,
+    "k30_raw_rho": -0.5543677375256323,
+    "pct_degenerate_super_fits": 40.7,
+    "quantile_p95_rho": 0.9858221663723423,
+    "quantile_p99_rho": 0.995670862102979,
+    "mean_kendall_tau": 0.7699475455370973,
+    "sd_kendall_tau": 0.019052365812880036,
+    "ci95_kendall_tau_lo": 0.7324929223866247,
+    "ci95_kendall_tau_hi": 0.8073847550878691,
+    "mean_spearman_rho": 0.907203745690771,
+    "ranking_stable": 0.0,
+    "n_treebanks_used": 194.0,
+    "n_bootstrap_iterations": 500.0,
+    "spearman_rho_xi_entropy": 0.1237912058337804,
+    "spearman_p_xi_entropy": 0.08548879252335424,
+    "rank_reg_beta_entropy": 0.1227083597163494,
+    "rank_reg_p_entropy": 0.12560872783386964,
+    "rank_reg_beta_morph": -0.05432799498447591,
+    "rank_reg_p_morph": 0.4930759354222922,
+    "rank_reg_beta_hdr": 0.15262159973257106,
+    "rank_reg_p_hdr": 0.037562166469469485,
+    "rank_reg_r_squared": 0.043018992903216535,
+    "parametric_agreement": 0.0,
+    "observed_rho": 0.1237912058337804,
+    "permutation_p_value": 0.0895,
+    "n_permutations": 10000.0,
+    "n_exceeding": 895.0,
+    "permutation_ci95_lo": -0.14228189932571034,
+    "permutation_ci95_hi": 0.14005808786287818,
+    "rank_recovery_rho": 0.9631089162193334,
+    "rank_recovery_rho_ci_lo": 0.9508032923074327,
+    "rank_recovery_rho_ci_hi": 0.9712229966085137,
+    "rank_recovery_passes": 1.0,
+    "xi_rmse": 0.12379471073838631,
+    "xi_bias": 0.001205711945069173,
+    "n_synthetic_treebanks": 100.0,
+    "true_xi_range_lo": -1.5,
+    "true_xi_range_hi": -0.1,
+    "rank_recovery_n50": 0.9366096609660965,
+    "rank_recovery_n100": 0.9484788478847883,
+    "rank_recovery_n200": 0.9769576957695769,
+    "rank_recovery_n500": 0.9929192919291928,
+    "bootstrap_stable": 0.0,
+    "rank_regression_agrees": 0.0,
+    "permutation_significant": 0.0,
+    "simulation_recovers": 1.0,
+    "all_four_pass": 0.0,
+    "ordinal_validity_verdict_code": 1.0
+  },
+  "datasets": [
+    {
+      "dataset": "treebank_ordinal_evaluation",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "xi=-0.2649, mean_rank=160.0, sd_rank=11.58",
+          "metadata_language": "Abkhaz",
+          "metadata_family": "Atlantic-Congo",
+          "predict_xi_raw": "-0.264881",
+          "predict_xi_raw_se": "0.054193",
+          "predict_entropy": "0.3681",
+          "predict_morph": "3.4527",
+          "predict_hdr": "0.3475",
+          "eval_boot_mean_rank": 159.962,
+          "eval_boot_sd_rank": 11.580352153540064,
+          "eval_boot_ci_width": 47.04999999999998
+        },
+        {
+          "input": "af_afribooms",
+          "output": "xi=-0.2675, mean_rank=158.9, sd_rank=10.76",
+          "metadata_language": "Afrikaans",
+          "metadata_family": "Afro-Asiatic",
+          "predict_xi_raw": "-0.267479",
+          "predict_xi_raw_se": "0.042873",
+          "predict_entropy": "0.4510",
+          "predict_morph": "1.4847",
+          "predict_hdr": "0.4139",
+          "eval_boot_mean_rank": 158.88,
+          "eval_boot_sd_rank": 10.758327007485876,
+          "eval_boot_ci_width": 46.0
+        },
+        {
+          "input": "akk_riao",
+          "output": "xi=-0.3617, mean_rank=127.1, sd_rank=27.16",
+          "metadata_language": "Akkadian",
+          "metadata_family": "Afro-Asiatic",
+          "predict_xi_raw": "-0.361730",
+          "predict_xi_raw_se": "0.058778",
+          "predict_entropy": "0.1086",
+          "predict_morph": "2.6210",
+          "predict_hdr": "0.5746",
+          "eval_boot_mean_rank": 127.076,
+          "eval_boot_sd_rank": 27.155592867768508,
+          "eval_boot_ci_width": 100.0
+        }
+      ]
+    },
+    {
+      "dataset": "simulation_recovery",
+      "examples": [
+        {
+          "input": "true_xi=-1.5000_n=200",
+          "output": "est_xi=-1.4543, error=0.0457",
+          "predict_true_xi": "-1.500000",
+          "predict_est_xi": "-1.454302",
+          "eval_abs_error": 0.045698258971519135,
+          "eval_signed_error": 0.045698258971519135
+        },
+        {
+          "input": "true_xi=-1.4859_n=200",
+          "output": "est_xi=-1.4157, error=0.0702",
+          "predict_true_xi": "-1.485859",
+          "predict_est_xi": "-1.415677",
+          "eval_abs_error": 0.07018131541542605,
+          "eval_signed_error": 0.07018131541542605
+        },
+        {
+          "input": "true_xi=-1.4717_n=200",
+          "output": "est_xi=-1.4416, error=0.0301",
+          "predict_true_xi": "-1.471717",
+          "predict_est_xi": "-1.441604",
+          "eval_abs_error": 0.03011344412472683,
+          "eval_signed_error": 0.03011344412472683
+        }
+      ]
+    },
+    {
+      "dataset": "ordinal_validity_summary",
+      "examples": [
+        {
+          "input": "ordinal_validity_verdict",
+          "output": "FAILED: 1/4 tests pass",
+          "eval_verdict_code": 1.0,
+          "eval_bootstrap_stable": 0.0,
+          "eval_rank_regression_agrees": 0.0,
+          "eval_permutation_significant": 0.0,
+          "eval_simulation_recovers": 1.0
+        }
+      ]
+    }
+  ]
+}

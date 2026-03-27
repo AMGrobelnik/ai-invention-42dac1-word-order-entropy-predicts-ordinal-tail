@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "method_name": "GEV Tail-Constraint Analysis of Maximum Dependency Distance",
+    "description": "Fits GEV distributions to sentence-level max dependency distances across 6 sentence-length bins, aggregates shape parameter xi per treebank via inverse-variance weighting, and analyses typological predictors via mixed-effects regression and mediation analysis.",
+    "fit_quality": {
+      "n_combos": 918,
+      "pct_gev_aic_best": 95.20697167755992,
+      "pct_ad_pass": 28.21350762527233,
+      "n_ad_tested": 918,
+      "mle_lmom_mean_diff": 0.028616192748360747,
+      "mle_lmom_median_diff": 0.0,
+      "mle_lmom_max_diff": 0.2424888383695949
+    },
+    "dual_track": {
+      "spearman_rho": 0.9996712864615219,
+      "spearman_p": 1.8466332911742925e-307
+    },
+    "grambank_crossval": {
+      "n_overlap": 178,
+      "spearman_r": 0.33975531927168956,
+      "spearman_p": 3.4885360499566707e-06,
+      "pearson_r": 0.4155670307817942,
+      "pearson_p": 8.006838715778745e-09
+    },
+    "regression": {
+      "fallback_notes": [],
+      "model_type": "mixed_effects",
+      "model_summary": "              Mixed Linear Model Regression Results\n==================================================================\nModel:                  MixedLM     Dependent Variable:     xi    \nNo. Observations:       172         Method:                 REML  \nNo. Groups:             26          Scale:                  0.0445\nMin. group size:        1           Log-Likelihood:         3.1057\nMax. group size:        84          Converged:              Yes   \nMean group size:        6.6                                       \n------------------------------------------------------------------\n                       Coef.  Std.Err.    z    P>|z| [0.025 0.975]\n------------------------------------------------------------------\nIntercept              -0.434    0.037 -11.639 0.000 -0.507 -0.361\nmorph_richness_z       -0.027    0.022  -1.255 0.210 -0.069  0.015\nhead_direction_ratio_z -0.031    0.022  -1.419 0.156 -0.074  0.012\nword_order_entropy_z    0.084    0.023   3.724 0.000  0.040  0.128\nGroup Var               0.018    0.064                            \n==================================================================\n",
+      "coefficients": {
+        "morph_richness_z": {
+          "beta": -0.027059554432692062,
+          "se": 0.021566459402069575,
+          "p": 0.20958570179836233,
+          "p_fdr": 0.20958570179836233,
+          "reject_fdr": false
+        },
+        "head_direction_ratio_z": {
+          "beta": -0.03106199026142626,
+          "se": 0.021896633022384784,
+          "p": 0.15602330412851628,
+          "p_fdr": 0.20958570179836233,
+          "reject_fdr": false
+        },
+        "word_order_entropy_z": {
+          "beta": 0.0839992653618956,
+          "se": 0.022553610580632936,
+          "p": 0.000195759718947162,
+          "p_fdr": 0.000587279156841486,
+          "reject_fdr": true
+        }
+      },
+      "vif": {
+        "morph_richness_z": 1.3649004550375623,
+        "head_direction_ratio_z": 1.1023800399121257,
+        "word_order_entropy_z": 1.3802957880325823
+      },
+      "pseudo_r2": 0.16295458785042038,
+      "partial_correlations": {
+        "morph_richness_z": {
+          "r": -0.11847576557038733,
+          "p": 0.12164109010996753
+        },
+        "head_direction_ratio_z": {
+          "r": -0.07276683558666665,
+          "p": 0.3428100668305183
+        },
+        "word_order_entropy_z": {
+          "r": 0.24630269287014908,
+          "p": 0.001125964990613305
+        }
+      },
+      "baseline_regression": {
+        "r_squared": 0.048281441684075,
+        "coefficients": {
+          "morph_richness_z": {
+            "beta": 0.4095039994828026,
+            "p": 0.007378770078466152
+          },
+          "head_direction_ratio_z": {
+            "beta": 0.052782267561332544,
+            "p": 0.697774318061418
+          },
+          "word_order_entropy_z": {
+            "beta": -0.06620667069695751,
+            "p": 0.6633615852311374
+          }
+        }
+      },
+      "n_treebanks": 172,
+      "n_families": 26
+    },
+    "mediation": {
+      "indirect_effect_mean": 0.028789266916890925,
+      "indirect_effect_ci": [
+        0.009078391442028447,
+        0.05513742928495675
+      ],
+      "indirect_significant": true,
+      "direct_effect_mean": -0.026345770886746032,
+      "direct_effect_ci": [
+        -0.057043927832131025,
+        0.0011488290315642988
+      ],
+      "direct_significant": false,
+      "total_effect_mean": 0.0024434960301448973,
+      "proportion_mediated": 11.781998645270459,
+      "n_valid_bootstraps": 5000,
+      "interpretation": "full_mediation"
+    },
+    "discordant_languages": {
+      "ar_padt": {
+        "description": "Arabic (rich morph + head-initial = DISCORDANT)",
+        "xi_raw": -0.5736131245726411,
+        "xi_raw_se": 0.054729171830152884,
+        "xi_per_bin": {
+          "10": -0.1779403717985547,
+          "12": -0.5468752945905501,
+          "14": -1.1308461933181457,
+          "16": -1.558933052623133,
+          "18": -2.4249506970672914,
+          "20": -2.5366587645991308
+        },
+        "morph_richness": 2.3848,
+        "head_direction_ratio": 0.686,
+        "word_order_entropy": 0.2622,
+        "predicted_xi": -0.5763094375096971,
+        "residual": 0.002696312937055967
+      },
+      "zh_gsd": {
+        "description": "Chinese (poor morph + mixed direction = DISCORDANT)",
+        "xi_raw": -0.34150333859025606,
+        "xi_raw_se": 0.02118865167126852,
+        "xi_per_bin": {
+          "10": -0.2818423172954148,
+          "14": -0.37990495583337075,
+          "12": -0.38994002423497265,
+          "16": -0.2920935965640633,
+          "20": -0.38313948783540336,
+          "18": -0.35744620648145703
+        },
+        "morph_richness": 0.1214,
+        "head_direction_ratio": 0.3762,
+        "word_order_entropy": 0.226,
+        "predicted_xi": -0.4266652070395672,
+        "residual": 0.08516186844931112
+      },
+      "eu_bdt": {
+        "description": "Basque (rich morph + head-final = CANONICAL)",
+        "xi_raw": -0.3474404591966716,
+        "xi_raw_se": 0.015243292229549696,
+        "xi_per_bin": {
+          "14": -0.32243792204117855,
+          "10": -0.29722060642999515,
+          "12": -0.3824044527062558,
+          "16": -0.37637596709227455,
+          "18": -0.38589167464296403,
+          "20": -0.35460891043351556
+        },
+        "morph_richness": 1.991,
+        "head_direction_ratio": 0.4684,
+        "word_order_entropy": 0.5859,
+        "predicted_xi": -0.31091324766334677,
+        "residual": -0.03652721153332483
+      },
+      "en_ewt": {
+        "description": "English (poor morph + head-initial = CANONICAL)",
+        "xi_raw": -0.5170893469173076,
+        "xi_raw_se": 0.014477846294579346,
+        "xi_per_bin": {
+          "10": -0.3708284468730218,
+          "12": -0.44048289999868606,
+          "16": -0.6450347291414349,
+          "14": -0.5414447911163465,
+          "20": -0.6933513100338354,
+          "18": -0.6083374357065954
+        },
+        "morph_richness": 1.3885,
+        "head_direction_ratio": 0.385,
+        "word_order_entropy": 0.2175,
+        "predicted_xi": -0.4700536725619127,
+        "residual": -0.04703567435539485
+      },
+      "tr_imst": {
+        "description": "Turkish (rich morph + head-final = CANONICAL)",
+        "xi_raw": -0.3649222401052948,
+        "xi_raw_se": 0.027622454620647212,
+        "xi_per_bin": {
+          "10": -0.43271068260077683,
+          "14": -0.3578339100811159,
+          "12": -0.3513184345797235,
+          "16": -0.3296940534495443,
+          "20": -0.3205336770008971,
+          "18": -0.33104709344563565
+        },
+        "morph_richness": 2.7547,
+        "head_direction_ratio": 0.3702,
+        "word_order_entropy": 0.1934,
+        "predicted_xi": -0.5168165907407154,
+        "residual": 0.15189435063542062
+      },
+      "hi_hdtb": {
+        "description": "Hindi (moderate morph + head-final = CANONICAL)",
+        "xi_raw": -0.6343298080727203,
+        "xi_raw_se": 0.01353826386479492,
+        "xi_per_bin": {
+          "10": -0.43488662667990907,
+          "14": -0.6817244048602629,
+          "12": -0.6241836702898654,
+          "18": -0.7009390125431373,
+          "16": -0.6838764475089926,
+          "20": -0.647542714424125
+        },
+        "morph_richness": 2.8869,
+        "head_direction_ratio": 0.4164,
+        "word_order_entropy": 0.2097,
+        "predicted_xi": -0.5272991523085198,
+        "residual": -0.10703065576420057
+      }
+    },
+    "spoken_written": [
+      {
+        "language": "Slovenian",
+        "spoken_tb": "sl_sst",
+        "written_tb": "sl_ssj",
+        "xi_spoken": -0.3313269229548899,
+        "xi_written": -0.38701811900215244,
+        "diff": 0.055691196047262526,
+        "cohens_d": 2.7368045870036903,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "French",
+        "spoken_tb": "fr_parisstories",
+        "written_tb": "fr_gsd",
+        "xi_spoken": -0.3031674656758668,
+        "xi_written": -0.42376898855350803,
+        "diff": 0.12060152287764125,
+        "cohens_d": 5.006438067235384,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "English-ATIS",
+        "spoken_tb": "en_atis",
+        "written_tb": "en_ewt",
+        "xi_spoken": -0.1048438313286888,
+        "xi_written": -0.5170893469173076,
+        "diff": 0.41224551558861877,
+        "cohens_d": 26.253385583383196,
+        "prediction_confirmed": false
+      },
+      {
+        "language": "English-ESL",
+        "spoken_tb": "en_eslspok",
+        "written_tb": "en_ewt",
+        "xi_spoken": -0.3031507039747284,
+        "xi_written": -0.5170893469173076,
+        "diff": 0.2139386429425792,
+        "cohens_d": 5.54942454707918,
+        "prediction_confirmed": false
+      }
+    ],
+    "evt_unique_pairs": {
+      "n_total_pairs": 18721,
+      "n_similar_mean_dd": 9410,
+      "n_evt_unique": 4352,
+      "pct_evt_unique": 46.24867162592986
+    },
+    "genre_control": {
+      "English": {
+        "treebanks": [
+          {
+            "id": "en_ewt",
+            "xi": -0.5170893469173076
+          },
+          {
+            "id": "en_gum",
+            "xi": -0.3800580204223395
+          },
+          {
+            "id": "en_partut",
+            "xi": -0.34373214761113313
+          },
+          {
+            "id": "en_lines",
+            "xi": -0.4979633204076192
+          }
+        ],
+        "within_lang_xi_range": 0.17335719930617444,
+        "within_lang_xi_std": 0.07424814448211603
+      },
+      "Czech": {
+        "treebanks": [
+          {
+            "id": "cs_cac",
+            "xi": -0.428387073784128
+          },
+          {
+            "id": "cs_fictree",
+            "xi": -0.5277983764943237
+          }
+        ],
+        "within_lang_xi_range": 0.09941130271019571,
+        "within_lang_xi_std": 0.04970565135509786
+      },
+      "French": {
+        "treebanks": [
+          {
+            "id": "fr_gsd",
+            "xi": -0.42376898855350803
+          },
+          {
+            "id": "fr_sequoia",
+            "xi": -0.4303097361542182
+          }
+        ],
+        "within_lang_xi_range": 0.006540747600710162,
+        "within_lang_xi_std": 0.003270373800355081
+      },
+      "Italian": {
+        "treebanks": [
+          {
+            "id": "it_isdt",
+            "xi": -0.36822009142133
+          },
+          {
+            "id": "it_vit",
+            "xi": -0.4812058745507826
+          },
+          {
+            "id": "it_partut",
+            "xi": -0.2705213606530697
+          }
+        ],
+        "within_lang_xi_range": 0.21068451389771292,
+        "within_lang_xi_std": 0.08608703191758928
+      }
+    },
+    "success_criteria": {
+      "gev_fit_adequate": false,
+      "dual_track_robust": true,
+      "evt_unique_above_20pct": true,
+      "gof_method": "ks_test (anti-conservative with estimated params)"
+    },
+    "fallback_notes": [],
+    "n_treebanks_analysed": 194,
+    "n_qualifying_combos": 918
+  },
+  "datasets": [
+    {
+      "dataset": "gev_tail_constraint_analysis",
+      "examples": [
+        {
+          "input": "ab_abnc",
+          "output": "{\"xi_raw\": -0.26488070460429747, \"xi_raw_se\": 0.05419278507486695, \"xi_norm\": -0.264882842208278, \"n_qualifying_bins\": 2, \"xi_per_bin\": {\"12\": -0.3148080936774954, \"10\": -0.2368340516783327}, \"baseline_mean_maxdd\": 6.397306397306397, \"family\": \"Atlantic-Congo\"}",
+          "metadata_treebank_id": "ab_abnc",
+          "metadata_language": "Abkhaz",
+          "metadata_iso_code": "ab",
+          "metadata_family": "Atlantic-Congo",
+          "metadata_morph_richness": 3.4527,
+          "metadata_head_direction_ratio": 0.3475,
+          "metadata_word_order_entropy": 0.3681,
+          "metadata_mean_dd_all": 1.9726,
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_n_bins": 2,
+          "metadata_fold": "analysis",
+          "predict_our_method": "{\"xi_raw\": -0.26488070460429747, \"xi_raw_se\": 0.05419278507486695, \"xi_norm\": -0.264882842208278}",
+          "predict_baseline": "{\"mean_maxdd\": 6.397306397306397}"
+        },
+        {
+          "input": "af_afribooms",
+          "output": "{\"xi_raw\": -0.2674785393001198, \"xi_raw_se\": 0.04287283422959968, \"xi_norm\": -0.26747921510483785, \"n_qualifying_bins\": 5, \"xi_per_bin\": {\"12\": -0.5366998652493737, \"14\": -0.24151942313687544, \"18\": -0.271862967480403, \"16\": -0.17323478053116784, \"20\": -0.3086482457664105}, \"baseline_mean_maxdd\": 9.900898812931647, \"family\": \"Afro-Asiatic\"}",
+          "metadata_treebank_id": "af_afribooms",
+          "metadata_language": "Afrikaans",
+          "metadata_iso_code": "af",
+          "metadata_family": "Afro-Asiatic",
+          "metadata_morph_richness": 1.4847,
+          "metadata_head_direction_ratio": 0.4139,
+          "metadata_word_order_entropy": 0.451,
+          "metadata_mean_dd_all": 3.1277,
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_n_bins": 5,
+          "metadata_fold": "analysis",
+          "predict_our_method": "{\"xi_raw\": -0.2674785393001198, \"xi_raw_se\": 0.04287283422959968, \"xi_norm\": -0.26747921510483785}",
+          "predict_baseline": "{\"mean_maxdd\": 9.900898812931647}"
+        },
+        {
+          "input": "akk_riao",
+          "output": "{\"xi_raw\": -0.3617299422041035, \"xi_raw_se\": 0.058777898247313894, \"xi_norm\": -0.36173064320522047, \"n_qualifying_bins\": 3, \"xi_per_bin\": {\"10\": -0.6729902645911003, \"12\": -0.2660197470814842, \"14\": -0.16521434075374575}, \"baseline_mean_maxdd\": 8.297692307692309, \"family\": \"Afro-Asiatic\"}",
+          "metadata_treebank_id": "akk_riao",
+          "metadata_language": "Akkadian",
+          "metadata_iso_code": "akk",
+          "metadata_family": "Afro-Asiatic",
+          "metadata_morph_richness": 2.621,
+          "metadata_head_direction_ratio": 0.5746,
+          "metadata_word_order_entropy": 0.1086,
+          "metadata_mean_dd_all": 2.4597,
+          "metadata_modality": "written",
+          "metadata_genre": "mixed",
+          "metadata_n_bins": 3,
+          "metadata_fold": "analysis",
+          "predict_our_method": "{\"xi_raw\": -0.3617299422041035, \"xi_raw_se\": 0.058777898247313894, \"xi_norm\": -0.36173064320522047}",
+          "predict_baseline": "{\"mean_maxdd\": 8.297692307692309}"
+        }
+      ]
+    }
+  ]
+}
